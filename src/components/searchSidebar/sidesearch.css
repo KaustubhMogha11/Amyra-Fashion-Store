@@ -1,0 +1,75 @@
+.sideSearch-sec{
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: flex-end;
+    font-family: 'Dosis';
+    z-index: 100;
+
+    /* opacity: 1;
+    transition: opacity 0.8s;
+    transition-timing-function: cubic-bezier(.8,0,.26,1);
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0); */
+    background: rgba(168,232,226,0.7);
+}
+.search-cont{
+    height: 77%;
+    width: 30%;
+    padding: 5rem;
+    background-color: rgb(255, 255, 255);
+}
+.search-title{
+    height: auto;
+    width: 75%;
+    color: #a8e8e2;
+    text-transform: uppercase;
+    font-size: 2.75rem;
+    line-height: 44px;
+    font-weight: 600;
+    letter-spacing: 7px;
+    display: flex;
+    justify-content: space-between;
+}
+.search-title img{
+    height: 1rem;
+    margin-top: .5rem;
+    cursor: pointer;
+}
+.search-box{
+    height: 3rem;
+    width: 80%;
+    margin-top: 5rem;
+    display: flex;
+    border-bottom: 2px solid rgb(207, 201, 201);
+}
+.search-box:hover{
+    border-bottom: 2px solid #a8e8e2;
+}
+.search-box input{
+    height: 100%;
+    width: 80%;
+    border: none;
+    outline: none;
+    color: rgb(88, 87, 87);
+}
+.search-icon-img{
+    height: 100%;
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.search-icon-img img{
+    height: 40%;
+}
+.search-text{
+    width: 80%;
+    letter-spacing: 2px;
+    line-height: 20px;
+    font-size: .8rem;
+    margin-top: 5rem;
+} 
