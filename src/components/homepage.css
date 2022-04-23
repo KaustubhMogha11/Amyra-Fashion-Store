@@ -1,0 +1,10 @@
+.tilt-card-section{
+    height: 35rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    background-color: #fff;
+    overflow: hidden;
+} 

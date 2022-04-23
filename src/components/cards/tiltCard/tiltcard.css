@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@600&display=swap');
+
+.tilt-card-con{
+    height: 60%;
+    width: 15rem;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    font-family: 'Dosis', sans-serif;
+    transition: all 2s;
+
+}
+/* .tilt-card-con:hover > .card-text-overlay{
+    animation: none;
+    
+} */
+
+.tilt-card-con img{
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    transition: all  1s;
+
+}
+.tilt-card-con:hover img{
+    transform: rotate(6deg) scale(1.1);
+    filter: blur(3px);
+}
+.card-overlay{
+    bottom: 2rem;
+    filter: blur(15px);
+    position: absolute;
+    border-radius: 0 50rem 0 0;
+    background-color: rgba(0, 0, 0, 0.212);
+    height: 60%;
+    width: 100%;
+    transition: all 1s;
+}
+.card-overlay:hover{
+    border-radius: 0 20rem 0 0;
+    height: 80%;
+}
+.card-text-overlay{
+    z-index: 2;
+    height: 85%;
+    width: 80%;
+    position: absolute;
+    top: 8%;
+    bottom: 10%;
+    right: 10%;
+    left: 10%;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    font-weight: 600;
+    color: #fff;
+    font-size: 1.8rem;
+    padding: 1rem;
+    transition: all ease-in-out 2s;
+    line-height: 40px;
+    transform: translateZ(500px);
+    border: 2px solid #fff;
+
+}
+.card-text-overlay span{
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    transform: translateZ(550px);
+}
+.tilt-move{
+    padding: 0 !important;
+    width: auto!important; 
+    height: auto !important;
+    box-shadow: none !important;
+    transform-style: preserve-3d ;
+    transform: perspective(1000px);
+}
+
+
+@keyframes border-show{
+    0%,50%{
+        transform: rotate(0deg) scale(1);
+        border: 1px solid #fff;
+    }80%{
+        transform:  rotate(6deg) ;
+        border: 2px solid #fff;
+    }90%{
+        transform:  rotate(-6deg) ;
+        border: 2px solid #fff;
+    }
+    100%{
+        transform:  rotate(0deg) scale(1);
+        border: 2px solid #fff;
+    }
+} 
