@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200&display=swap');
+
 
 .navbar {
     width: 100%;
@@ -30,11 +30,12 @@
     display: flex;
     cursor: pointer;
     margin-right: 2rem;
-    transition: all 2s;
+    transition: all .5s;
     box-shadow: 5px 5px 25px -5px rgb(143 197 192 / 40%);
 }
 .menu-box:hover{
-    transform: translate(0px,6px);
+    transform: translate(0px,2px);
+    box-shadow: 5px 5px 5px -5px rgb(143 197 192 / 40%);
 }
 .nav-menu-icon{
     height: 100%;

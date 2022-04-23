@@ -1,0 +1,369 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap');
+.bodysec-cont{
+    height: 38rem;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+
+}
+.background-img{
+    height: 110%;
+    width: 100%;
+    z-index: -1;
+}
+.flower{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    animation: flower-animate infinite 8s ease-in-out 4s;
+}
+.botique{
+    font-family: 'Montserrat', sans-serif;
+    position: absolute;
+    top: 10%;
+    z-index: 2;
+    font-size: 1.6rem;
+    filter: blur(1px);
+    color: rgba(0, 0, 0, 0.2);
+    animation: little-big  infinite 8s ease-in-out 2s;
+}
+.vintage{
+    color: #a8ece6;
+    font-family: 'Montserrat', sans-serif;
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    z-index: 2;
+    font-size: 2.7rem;
+    filter: blur(.2px);
+    animation: big-little  infinite 7s ease-in-out 0s;
+}
+.couture{
+    font-family: 'Montserrat', sans-serif;
+    position: absolute;
+    top: 34%;
+    left: 15%;
+    z-index: 2;
+    font-size: 2.7rem;
+    filter: blur(1.8px);
+    color: rgba(0, 0, 0, 0.2);
+    animation: little-big  infinite 4s ease-in-out 2s;
+}
+
+.fashion{
+    color: #a8ece6;
+    font-family: 'Montserrat', sans-serif;
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    z-index: 2;
+    font-size: 2.7rem;
+    filter: blur(2px);
+    animation: big-little-v2  infinite 13s ease-in-out 2s;
+}
+.elegence{
+    font-family: 'Montserrat', sans-serif;
+    position: absolute;
+    top: 10%;
+    right: 7%;
+    z-index: 2;
+    font-size: 1.3rem;
+    filter: blur(.5px);
+    color: #a8ece6;
+    animation: little-big  infinite 8s ease-in-out 2s;
+}
+.homemade{
+    color: rgba(0, 0, 0, 0.2);
+    font-family: 'Montserrat', sans-serif;
+    position: absolute;
+    top: 20%;
+    right: 2%;
+    z-index: 2;
+    font-size: 2.5rem;
+    filter: blur(2px);
+    animation: big-little  infinite 10s ease-in-out 2s;
+}
+.unique{
+    color: #a8ece6;
+    font-family: 'Montserrat', sans-serif;
+    position: absolute;
+    top: 35%;
+    right: 0;
+    z-index: 2;
+    font-size: 2.5rem;
+    filter: blur(2.5px);
+    animation: big-little-v2  infinite 15s ease-in-out 2s;
+}
+.appreal{
+    color: #a8ece6;
+    font-family: 'Montserrat', sans-serif;
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    z-index: 2;
+    font-size: 2rem;
+    filter: blur(.2px);
+    animation: big-little  infinite 7s ease-in-out 0s;
+}
+.discover{
+    font-size: 16rem;
+    letter-spacing: 15px;
+    position: absolute;
+    bottom: -2rem;
+    z-index: 2;
+    color: #a8ece6;
+    animation: big-little-v3  infinite 15s linear 2s;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.trends{
+    font-family: sans-serif;
+    font-size: 2.8rem;
+    letter-spacing: 1.5rem;
+    position: absolute;
+    bottom: 10%;
+    z-index: 3;
+    width: 10%;
+    line-height: 60px;
+    left: 15%;
+    text-transform: uppercase;
+    font-weight: 600 !important;
+}
+.shop-now-btn{
+    position: absolute;
+    right: 10%;
+    bottom: 10%;
+    padding: 1rem;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    text-transform: uppercase;
+    font-family: sans-serif;
+    background-color: #000;
+    color: #a8ece6;
+    text-align: start;
+    letter-spacing: 8px;
+    font-family: 400;
+    z-index: 3;
+    height: 5rem;
+    width: 12rem;
+    cursor: pointer;
+}
+.shop-now-btn span{
+    font-family: sans-serif;
+    font-weight: 1000;
+    font-size: 2.5rem;
+    line-height: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* mobile  */
+@media (max-width: 480px) {
+    .bodysec-cont{
+        height: 20rem;
+    }
+    .background-img{
+        width: 190%;
+        height: 90%;
+        position: absolute;
+        left: -12rem;
+    }
+    .flower{
+        display: none;
+    }
+    .discover{
+        font-size: 5.5rem;
+        bottom: -5px;
+        letter-spacing: 5px;
+    }
+    .trends{
+        font-size: 1rem;
+        line-height: 30px;
+        left: 5%;
+        bottom: 5%;
+        letter-spacing: 15px;
+    }
+    .shop-now-btn{
+        font-size: .6rem;
+        width: 6rem;
+        height: 3rem;
+        right: 5%;
+        padding: 0;
+        justify-content: center;
+        bottom: 7%;
+    }
+    .shop-now-btn span{
+        font-size: 1.2rem;
+    }
+    .botique{
+        display: none;
+    }
+    .vintage{
+        display: none;
+    }
+    .couture{
+        display: none;
+    }
+    .fashion{
+        display: none;
+    }
+    .unique{
+        display: none;
+    }
+    .elegence{
+        display: none;
+    }
+    .appreal{
+        display: none;
+    }
+    .homemade{
+        display: none;
+    }
+
+}
+
+  /* tablet */
+@media (min-width: 481px) and (max-width: 810px) {
+
+    .bodysec-cont{
+        height: 25rem;
+    }
+    .background-img{
+        width: 120%;
+        height:80%;
+    }
+
+    .discover{
+        font-size: 10rem;
+    }
+    .trends{
+        font-size: 2rem;
+        line-height: 40px;
+        left: 5%;
+    }
+    .shop-now-btn{
+        font-size: 1rem;
+        width: 8rem;
+        height: 4rem;
+        right: 5%;
+    }
+    .shop-now-btn span{
+        font-size: 1.5rem;
+    }
+    .botique{
+        display: none;
+    }
+    .vintage{
+        font-size: 1.5rem;
+        left: 5%;
+        top: 5%;
+    }
+    .couture{
+        left: 10%;
+        top: 20%;
+        font-size: 1.8rem;
+    }
+    .fashion{
+        top: 40%;
+        font-size: 2rem;
+    }
+    .unique{
+        display: none;
+    }
+    .elegence{
+        display: none;
+    }
+    .appreal{
+        display: none;
+    }
+    .homemade{
+        display: none;
+    }
+
+
+
+}
+
+
+
+
+
+
+
+
+
+@keyframes flower-animate {
+    0% {
+        transform: rotate(0deg)
+    }
+    50% {
+        transform: rotate(-5deg)
+    }
+    100% {
+        transform: rotate(0deg)
+    } 
+}
+@keyframes little-big {
+    0% {
+        transform: scale(1)
+    }
+    50% {
+        transform: scale(1.1)
+    }
+    100% {
+        transform: scale(1)
+    } 
+}
+@keyframes big-little {
+    0% {
+        transform: scale(1.2)
+    }
+    50% {
+        transform: scale(1)
+    }
+    100% {
+        transform: scale(1.2)
+    } 
+}
+@keyframes big-little-v2 {
+    0% {
+        transform: scale(1.6)
+    }
+    50% {
+        transform: scale(1)
+    }
+    100% {
+        transform: scale(1.6)
+    } 
+}
+@keyframes big-little-v3 {
+    0% {
+        transform: scale(1.2)
+    }
+    50% {
+        transform: scale(1.1)
+    }
+    100% {
+        transform: scale(1.2)
+    } 
+} 

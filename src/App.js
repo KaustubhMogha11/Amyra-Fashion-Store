@@ -1,17 +1,20 @@
 
-import { useState } from 'react';
-import './App.css';
-import Navbar from './components/navbar/Navbar';
-import SideSearch from './components/searchSidebar/SideSearch';
+import "./App.css";
+import BodySection from "./components/bodySection/BodySection";
+import Navbar from "./components/navbar/Navbar";
 
 function App() {
-  const [isSideSearch,setIsSideSearch] = useState(false)
+
+
   return (
     <>
-      
-    <Navbar sideSearchView={(isSideSearch) => setIsSideSearch(isSideSearch)}/>
-    {isSideSearch?<SideSearch sideSearchView={(isSideSearch) => setIsSideSearch(isSideSearch)}/>:null}
+    
 
+
+      
+      <div className="main-cont">
+        <BodySection />
+      </div>
     </>
   );
 }
