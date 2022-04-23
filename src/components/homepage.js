@@ -16,5 +16,5 @@ const Homepage = () => {
     </>
   )
 }
-// anime={"early-blur"} 
+
 export default Homepage

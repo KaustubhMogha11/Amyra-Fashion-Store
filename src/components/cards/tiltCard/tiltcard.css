@@ -77,6 +77,19 @@
     transform: perspective(1000px);
 }
 
+@media (max-width: 480px) {
+    .tilt-card-con{
+        width: 6.2rem;
+        height: 40%;
+    }
+    .card-text-overlay{
+        font-size: 1rem;
+        line-height: 20px;
+    }
+    .card-text-overlay span{
+        font-size: .5rem;
+    }
+}
 
 @keyframes border-show{
     0%,50%{
