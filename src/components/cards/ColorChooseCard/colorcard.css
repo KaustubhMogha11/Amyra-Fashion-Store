@@ -1,0 +1,80 @@
+.color-card-cont{
+    height: 75%;
+    width: 13rem;
+    cursor: pointer;
+}
+.color-card-img{
+    height: 60%;
+    width: 100%;
+    cursor: pointer;
+    position: relative;
+}
+.color-card-img img{
+    height: 100%;
+    width: 100%;
+
+}
+.color-card-img::before{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    transition: opacity 1s ease,transform 2s cubic-bezier(0,0,.44,1.18),-webkit-transform 2s cubic-bezier(0,0,.44,1.18);
+    content: "";
+    background: url(../../../../public/images/card/jacket-1.jpg) no-repeat center center/cover;
+}
+.color-card-img:hover::before{
+
+    opacity: 1;
+}
+
+.color-sec{
+    height: 4rem;
+}
+.color-card-content-name{
+    height: 100%;
+    width: 80%;
+    padding: .3rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    font-size: .8rem;
+
+    text-transform: uppercase;
+}
+.choose-color{
+    height: 2rem;
+    width: 100%;
+    padding: 0 .3rem;
+}
+.choose-color span:nth-child(1){
+    padding: 0px 10px;
+    border-radius: 50%;
+    background-color: #d2a586;
+}
+.choose-color span:nth-child(2){
+    padding: 0px 10px;
+    border-radius: 50%;
+    margin-left:1rem;
+    background-color: #C1BBC7;
+}
+@media (max-width: 480px) {
+    .color-card-cont{
+        height: 40%;
+        width: 8rem;
+        cursor: pointer;
+    }
+    .color-card-content-name{
+        font-size: .5rem;
+    }
+    .color-card-content-name-like{
+        height: 3rem;
+    }
+    .color-card-like img{
+        height: 1.4rem;
+        width: 1.5rem;
+    }
+    .color-card-img{
+        height: 60%;
+    }
+  } 

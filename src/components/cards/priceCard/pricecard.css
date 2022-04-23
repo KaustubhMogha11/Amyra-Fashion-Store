@@ -1,0 +1,39 @@
+price-card-cont{
+    height: 75%;
+    width: 13rem;
+    cursor: pointer;
+}
+.price-card-img{
+    height: 60%;
+    width: 100%;
+    cursor: pointer;
+    position: relative;
+}
+.price-card-img img{
+    height: 100%;
+    width: 100%;
+
+}
+.price-card-img::before{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    transition: opacity 1s ease,transform 2s cubic-bezier(0,0,.44,1.18),-webkit-transform 2s cubic-bezier(0,0,.44,1.18);
+    content: "";
+    background: url(../../../../public/images/card/shirt-2-2.jpeg) no-repeat center center/cover;
+}
+.price-card-img:hover::before{
+
+    opacity: 1;
+}
+
+
+@media (max-width: 480px) {
+    .price-card-cont{
+        height: 45%;
+        width: 8rem;
+        cursor: pointer;
+    }
+  } 

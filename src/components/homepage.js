@@ -2,6 +2,8 @@ import React from 'react'
 import "./homepage.css"
 import BodySection from "./bodySection/BodySection"
 import TiltCard from './cards/tiltCard/TiltCard'
+import MensJacket from './mensJacket/MensJacket'
+
 const Homepage = () => {
   return (
     <>
@@ -12,7 +14,9 @@ const Homepage = () => {
         <TiltCard delay={2} itemCount={7} itemName={"shoes"} imgSrc={"images/category/shoes.jpeg"}/>
         <TiltCard delay={8} itemCount={3} itemName={"clothing"} imgSrc={"images/category/clothing.jpeg"}/>
         <TiltCard delay={2} itemCount={9} itemName={"women's dress"} imgSrc={"images/category/women-cloth.jpg"}/>
+       
         </div>
+        <MensJacket/>
     </>
   )
 }

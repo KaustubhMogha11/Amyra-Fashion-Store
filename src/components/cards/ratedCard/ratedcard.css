@@ -1,0 +1,156 @@
+.rated-card-cont{
+    height: 75%;
+    width: 13rem;
+    cursor: pointer;
+}
+.rated-card-img{
+    height: 60%;
+    width: 100%;
+    cursor: pointer;
+    position: relative;
+}
+.rated-card-img img{
+    height: 100%;
+    width: 100%;
+
+}
+.rated-card-img::before{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    transition: opacity 1s ease,transform 2s cubic-bezier(0,0,.44,1.18),-webkit-transform 2s cubic-bezier(0,0,.44,1.18);
+    content: "";
+    background: url(../../../../public/images/card/shirt-1-2.jpeg) no-repeat center center/cover;
+}
+.rated-card-img:hover::before{
+
+    opacity: 1;
+}
+
+.rated-card-content{
+    height: 40%;
+    width: 100%;
+}
+.card-content-type{
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: .7rem;
+    padding: .5rem .3rem;
+}
+.card-content-name-like{
+    height: 5rem;
+    width: 100%;
+    display: flex;
+}
+.card-content-name{
+    height: 100%;
+    width: 80%;
+    padding: .3rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    font-size: .8rem;
+    text-transform: uppercase;
+}
+.card-like{
+    height: 100%;
+    width: 20%;
+    display: flex;
+    justify-content: flex-end;
+
+}
+.card-like img{
+    height: 32%;
+    padding: .3rem;
+}
+.card-animated-btn{
+    color: rgb(133, 126, 126);
+    letter-spacing: 1px;
+    padding: 0.3rem;
+    position: relative;
+    height: 2.2rem;
+    overflow: hidden;
+    transition: all .8s;
+}
+.card-animated-btn::before{
+    height: 2rem;
+    width: 7rem;
+    content: "ADD TO CART";
+    position: absolute;
+    bottom: -2.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: .8rem;
+    letter-spacing: 2px;
+    background-color: #f2fffe;
+    color: #000;
+    border: 2px solid #a1f0ea;
+    transition: all .3s;
+}
+.card-animated-btn:hover{
+    font-size: 0px;
+}
+.card-animated-btn:hover::before{
+    bottom: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* star component  */
+
+#star-btn {
+    margin-top: 1rem;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+  }
+  .on {
+    color: #38ddd2;
+  }
+  .off {
+    color: #85d6d1ad;
+  }
+
+  @media (max-width: 480px) {
+    .rated-card-cont{
+        height:45%;
+        width: 8rem;
+        cursor: pointer;
+    }
+    .card-content-name{
+        font-size: .5rem;
+    }
+    .card-content-name-like{
+        height: 3rem;
+    }
+    .card-like img{
+        height: 1.4rem;
+        width: 1.5rem;
+    }
+    .card-animated-btn{
+        font-size: .6rem;
+    }
+    .card-animated-btn::before{
+        height: 1rem;
+        width: 4rem;
+        font-size: .5rem;
+        letter-spacing: 0;
+
+    }
+  }
