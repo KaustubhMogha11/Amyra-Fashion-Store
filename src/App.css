@@ -1,3 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Dosis', sans-serif;
+}
+/* .main-cont{
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}  */
 .App {
   text-align: center;
 }
@@ -35,16 +47,4 @@
   to {
     transform: rotate(360deg);
   }
-}
-@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200&display=swap');
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Dosis', sans-serif;
-}
-.main-cont{
-    height: 100vh;
-    width: 100vw;
-    overflow: hidden;
 }
