@@ -1,0 +1,155 @@
+.shoe-card-cont{
+    height: 32rem;
+    width: 20rem;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: .5rem;
+    z-index: 2;
+    background-color: #F8F8F8;
+
+}
+.shoe-name{
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    color: #69c9cd;
+    line-height: 18px;
+    text-align: center;
+    font-weight: 600;
+    font-style: normal;
+    letter-spacing: 2px;
+}
+.shoe-type{
+    letter-spacing: 1px;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 2rem;
+    text-align: center;
+}
+.shoe-img{
+    height: 20rem;
+    width: 100%;
+    margin-top: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.shoe-img img{
+    width: 100%;
+    aspect-ratio: auto 300 / 250;
+    animation: imgMove 10s infinite;
+
+}
+.shoe-price{
+    text-align: center;
+    font-size: 2rem;
+    line-height: 1;
+}
+.shoe-price span{
+    color: rgb(114, 110, 110);
+    text-decoration: line-through;
+    font-size: 1.5rem;
+    margin-right: 1rem;
+}
+.shoe-add-cart-btn{
+    height: 3rem;
+    width: 9rem;
+    letter-spacing: 2px;
+    border: 2px solid black;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    text-transform: uppercase;
+    font-size: .8rem;
+    margin-top: 2rem;
+    cursor: pointer;
+}
+
+@media (max-width: 480px) {
+    .shoe-card-cont{
+        margin:3rem 0 ;
+    }
+    .shoe-img{
+        margin-top: 0;
+    }
+    .shoe-img img{
+        height: 80%;
+        width: 80%;
+        animation: none;
+    }
+    .shoe-type{
+        font-size: 1.6rem;
+        width: 100%;
+        margin-top: .5rem;
+    }
+    .shoe-add-cart-btn{
+        height: 4rem;
+        width: 10rem;
+    }
+}
+
+
+
+@media (min-width: 481px) and (max-width: 810px) {
+    .shoe-card-cont{
+        height: 20rem;
+        width: 15rem;
+    }
+    .shoe-name{
+        font-size: 1rem;
+    }
+    .shoe-type{
+        font-size: 1.5rem;
+        width: 80%;
+    }
+    .shoe-price{
+        font-size: 1.2rem;
+    }
+    .shoe-price span{
+        font-size: .8rem;
+    }
+    .shoe-img{
+        margin-top: 0rem;
+        height: 8rem;
+    }
+    .shoe-img img{
+        width: 50%;
+        height: 65%;
+        animation: none;
+
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@keyframes imgMove{
+    0%,20%{
+        width: 100%;
+        aspect-ratio: auto 300 / 250;
+    }
+    60%{
+        width: 50%;
+        aspect-ratio: auto 250 / 200;
+        filter: blur(1px);
+        }
+    100%{
+        width: 100%;
+        aspect-ratio: auto 300 / 250;
+    }
+
+}

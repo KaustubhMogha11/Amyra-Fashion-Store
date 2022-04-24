@@ -3,7 +3,7 @@ import "./homepage.css"
 import BodySection from "./bodySection/BodySection"
 import TiltCard from './cards/tiltCard/TiltCard'
 import MensJacket from './mensJacket/MensJacket'
-
+import ShoesSection from './shoesSection/ShoesSection'
 const Homepage = () => {
   return (
     <>
@@ -17,6 +17,7 @@ const Homepage = () => {
        
         </div>
         <MensJacket/>
+        <ShoesSection/>
     </>
   )
 }
