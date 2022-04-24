@@ -1,6 +1,6 @@
 .rated-card-cont{
     height: 75%;
-    width: 13rem;
+    width: 14rem;
     cursor: pointer;
 }
 .rated-card-img{
@@ -154,11 +154,17 @@
         letter-spacing: 0;
 
     }
+    .card-animated-btn::before{
+        bottom: 1rem;
+    }
   }
   @media (min-width: 481px) and (max-width: 810px){
     .rated-card-cont{
         height:28rem;
         cursor: pointer;
         margin-top: 3rem;
+    }
+    .card-animated-btn::before{
+        bottom: 0rem;
     }
   }
