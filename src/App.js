@@ -2,7 +2,7 @@
 import "./App.css";
 
 import Homepage from "./components/Homepage";
-import Navbar from "./components/navbar/Navbar";
+
 
 function App() {
 
@@ -14,7 +14,7 @@ function App() {
 
       
       <div className="main-cont">
-       
+        
          <Homepage/>
       </div>
     </>
