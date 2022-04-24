@@ -60,8 +60,9 @@
 }
 @media (max-width: 480px) {
     .color-card-cont{
-        height: 40%;
-        width: 8rem;
+        height: 23rem;
+        width: 10rem;
+        margin-top: 1rem;
         cursor: pointer;
     }
     .color-card-content-name{
@@ -77,4 +78,12 @@
     .color-card-img{
         height: 60%;
     }
+}
+    @media (min-width: 481px) and (max-width: 810px){
+        .color-card-cont{
+            height:28rem;
+            cursor: pointer;
+            margin-top: 3rem;
+        }
   } 
+  

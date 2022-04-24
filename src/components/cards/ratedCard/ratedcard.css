@@ -129,9 +129,10 @@
 
   @media (max-width: 480px) {
     .rated-card-cont{
-        height:45%;
-        width: 8rem;
+        height:23rem;
+        width: 10rem;
         cursor: pointer;
+        margin-top: 1rem;
     }
     .card-content-name{
         font-size: .5rem;
@@ -152,5 +153,12 @@
         font-size: .5rem;
         letter-spacing: 0;
 
+    }
+  }
+  @media (min-width: 481px) and (max-width: 810px){
+    .rated-card-cont{
+        height:28rem;
+        cursor: pointer;
+        margin-top: 3rem;
     }
   }

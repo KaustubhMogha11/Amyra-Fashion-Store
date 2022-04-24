@@ -32,8 +32,15 @@ price-card-cont{
 
 @media (max-width: 480px) {
     .price-card-cont{
-        height: 45%;
-        width: 8rem;
+        height: 23rem;
+        width: 10rem;
+        margin-top: 1rem;
+    }
+  }
+  @media (min-width: 481px) and (max-width: 810px){
+    .price-cont{
+        height:28rem;
         cursor: pointer;
+        margin-top: 3rem;
     }
   } 
