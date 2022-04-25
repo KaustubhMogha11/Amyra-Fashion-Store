@@ -16,10 +16,9 @@ const MensJacket = () => {
             <span>AMAYRA'S SHOP CHOICE</span>
             </div>
             <div className="mens-jacket-cont">
-            <RatedCard/>
-            
-            <ColorCard/>
-            <PriceCard/>
+            <RatedCard imgSrc="images/card/shirt-1.jpeg" name={"ELEMENT BUFFALO PLAID FLANNEL SHIRT IN REGULAR FIT"}/>
+            <ColorCard />
+            <PriceCard imgSrc={"images/card/shirt-2.jpeg"} name={"SELECTED HOME OVERCOAT"}/>
             </div>
         </div>
     </div>

@@ -1,0 +1,116 @@
+.mensjacket-sec{
+    height: 50rem;
+    width: 100%;
+    background-color: #F8F8F8;
+    display: flex;
+}
+.men-sec-img{
+    height: 100%;
+    width: 40%;
+}
+.men-sec-img img{
+    height: 100%;
+    width: 100%;
+}
+.mens-jacket-sec-card-cont{
+    height: 100%;
+    width: 60%;
+    padding: 1rem;
+}
+.mens-jacket-sec-cont{
+    height: 100%;
+    width: 100%;
+    background-color: #fff;
+    padding: 4rem 2rem;
+}
+.mens-jacket-sec-cont-heading{
+    font-size: 2.5rem;
+    color: #a8ece6;
+    line-height: 40px;
+    text-align: left;
+    font-family: Dosis;
+    font-weight: 800;
+    font-style: normal;
+}
+.mens-jacket-sec-cont-heading span{
+    font-size: 1.2rem;
+    color: #000000;
+    letter-spacing: 1px;
+    line-height: 18px;
+    font-weight: 400;
+}
+.mens-jacket-cont{
+    width: 100%;
+    height: 45rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+@media (max-width: 480px)  {
+    .mens-jacket-sec-cont-heading{
+        font-size: 2rem;
+    }
+    .mens-jacket-sec-cont-heading span{
+        font-size: 1rem;
+    }
+    .mensjacket-sec{
+        flex-direction: column;
+    }
+    .men-sec-img{
+        width: 100%;
+        height: 30%;
+    }
+    .men-sec-img img{
+        height: 100%;
+        width: 100%;
+    }
+    .mens-jacket-sec-card-cont{
+        width: 100%;
+
+    }
+    .mens-jacket-sec-cont{
+        padding: 1rem;
+    }
+    .mensjacket-sec{
+        height: auto;
+    }
+    .mens-jacket-cont{
+        margin-top: 3rem;
+        height: auto;
+        justify-content: space-around;
+    }
+    .mens-jacket-sec-card-cont{
+        padding: 0;
+    }
+
+}
+
+
+
+@media (min-width: 481px) and (max-width: 810px){
+    .mensjacket-sec{
+        flex-direction: column;
+    }
+    .men-sec-img{
+        width: 100%;
+        height: 50%;
+    }
+    .men-sec-img img{
+        height: 100%;
+        width: 100%;
+    }
+    .mens-jacket-sec-card-cont{
+        width: 100%;
+    }
+    .mensjacket-sec{
+        height: auto;
+    }
+    .mens-jacket-cont{
+        margin-top: 3rem;
+        height: auto;
+        justify-content: space-around;
+    }
+}
