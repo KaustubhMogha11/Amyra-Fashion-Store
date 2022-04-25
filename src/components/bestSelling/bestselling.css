@@ -1,0 +1,60 @@
+.best-selling-sec{
+    height: 35rem;
+    width: 100%;
+    background-color: #fff;
+}
+.bestselling-title{
+    font-size: 1.625rem;
+    line-height: 36px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-align: center;
+    font-weight: 600;
+    font-style: normal;
+    margin-top: 4rem;
+}
+
+.bestselling-title:after {
+    margin: 10px auto 0;
+    text-align: center;
+    display: block;
+    content: "";
+    height: 3px;
+    width: 100px;
+    background-color: #a8e8e2;
+}
+.scrolling-cont{
+    height: auto;
+    width: 100%;
+    overflow-x:auto;
+}
+.best-selling-card-cont{
+    margin-top: 3rem;
+    height: auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+
+.scrolling-cont::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+}
+.scrolling-cont::-webkit-scrollbar-thumb {
+    background: #FF0000;
+}
+
+@media (max-width: 480px)  {
+    .best-selling-card-cont{
+        width: 60rem;
+    }
+}
+
+
+@media (min-width: 481px) and (max-width: 810px){
+    .best-selling-card-cont{
+        width: 90rem;
+    }
+} 

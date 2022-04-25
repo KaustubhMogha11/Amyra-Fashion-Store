@@ -12,7 +12,7 @@ const WomenSection = () => {
             WOMEN'S DRESSES <br />
             <span>AMAYRA'S SHOP CHOICE</span>
             </div>
-            <div className="mens-jacket-cont">
+            <div className="womens-jacket-cont">
             <PriceCard imgSrc={"images/card/women-1.jpeg"} name={"MISSGUIDED RIBBED WRAP FRONT SLEEVELESS CROP TOP"}/>
             <RatedCard imgSrc="images/card/women-2.jpeg" name={"FAME AND PARTNERS TALL VALENCIA MAXI DRESS"}/>
             <PriceCard imgSrc={"images/card/women-3.jpeg"} name={"LAVISH ALICE DEEP BANDEAU ASYMMETRIC HEM MIDI DRESS"}/>
