@@ -1,7 +1,7 @@
 import React from "react";
 import RatedCard from "../cards/ratedCard/RatedCard";
 import PriceCard from "../cards/priceCard/PriceCard"
-import ColorCard from "../cards/ColorChooseCard/ColorCard"
+
 import "./womensection.css"
 const WomenSection = () => {
     return <>
