@@ -6,6 +6,7 @@ import MensJacket from './mensJacket/MensJacket'
 import ShoesSection from './shoesSection/ShoesSection'
 import WomenSection from './woMenSection/WomenSection'
 import BestSelling from './bestSelling/BestSelling'
+import Insta from './instagram/Insta'
 const Homepage = () => {
   return (
     <>
@@ -22,6 +23,7 @@ const Homepage = () => {
         <ShoesSection/>
         <WomenSection/>
         <BestSelling/>
+        <Insta/>
     </>
   )
 }

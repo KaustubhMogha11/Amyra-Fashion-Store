@@ -1,0 +1,70 @@
+.instagram-sec{
+    width: 100%;
+    height: 25rem;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.instagram-cont{
+    height: 12rem;
+    width: 100%;
+    display: flex;
+    position: relative;
+}
+.instapic{
+    height: 100%;
+    width: 12.5%;
+}
+.insta-overlay{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all .5s;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.308);
+}
+.insta-overlay:hover{
+    background-color: transparent;
+}
+
+
+.inst-follow-cont{
+z-index: 4;
+position: absolute;
+top: 50%;
+left: 50%;
+padding: 15px 30px;
+background-color: rgba(255,255,255,.8);
+transition: all .5s;
+white-space: nowrap;
+font-size: 14px;
+font-weight: 600;
+text-transform: uppercase;
+letter-spacing: 4px;
+-webkit-transform: translate(-50%,-50%);
+transform: translate(-50%,-50%);
+box-shadow: 0 0 20px 0 rgb(0 0 0 / 10%);
+}
+.inst-follow-cont:hover{
+    background-color: #fff;
+}
+
+@media (max-width: 480px) {
+    .instagram-cont{
+        flex-wrap: wrap;
+        height: auto;
+    }
+    .instapic{
+        height: 6rem;
+        width: 7.5rem;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 810px){
+    .instagram-cont{
+        height: auto;
+    }
+
+} 
