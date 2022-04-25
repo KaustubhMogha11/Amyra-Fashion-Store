@@ -17,7 +17,7 @@
   width: 100vw;
   overflow: hidden;
   box-shadow: 0 0 20px #2696e8, 0 0 60px #2696e8, 0 0 100px #2696e8;
-  animation: colors 15s infinite;
+  /* animation: colors 15s infinite; */
 }
 
 /* ===== Scrollbar ===== */
@@ -41,4 +41,12 @@
   background-color: #a7ece6;
   border-radius: 5px;
   border: 3px solid #ffffff;
+}
+@keyframes colors {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
 }

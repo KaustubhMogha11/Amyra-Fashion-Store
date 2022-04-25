@@ -7,6 +7,7 @@
 .men-sec-img{
     height: 100%;
     width: 40%;
+    animation: colors 15s infinite 2s;
 }
 .men-sec-img img{
     height: 100%;
