@@ -154,7 +154,7 @@
 
 
 .product-body-card-sec{
-    height: 100rem;
+    height: auto;
     width: 70%;
     padding: 1.5rem;
 }
@@ -176,7 +176,15 @@
 .closeFilter{
     display: none;
 }
-
+.product-header-heading {
+    font-size: 3rem;
+}
+.product-header-cont {
+    height: 10rem;
+}
+.category-item {
+    font-size: .6rem;
+}
 @media (max-width: 480px){
     .product-body-filter-sec{
         position: absolute;
