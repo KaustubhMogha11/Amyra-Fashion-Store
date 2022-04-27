@@ -1,5 +1,8 @@
 import React from 'react'
 import "./log-reg.css"
+import Footer from '../footer/Footer'
+import Insta from '../instagram/Insta'
+
 const Login = () => {
   return (
     <>
@@ -20,6 +23,8 @@ const Login = () => {
                 </div>
             </form>
         </div>
+        <Insta/>
+        <Footer/>
     </>
   )
 }

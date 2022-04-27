@@ -1,10 +1,12 @@
 import React from 'react'
 import "./log-reg.css"
+import Footer from '../footer/Footer'
+import Insta from '../instagram/Insta'
 const Register = () => {
     return (
      
       <>
-      <div className="log-reg-sec">
+       <div className="log-reg-sec ">
           <form>
               <div className="form-heading">
               Register
@@ -23,6 +25,8 @@ const Register = () => {
               </div>
           </form>
       </div>
+      <Insta/>
+    <Footer/>
   </>
     )
   }
