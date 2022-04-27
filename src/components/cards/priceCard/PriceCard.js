@@ -1,8 +1,10 @@
 import React from 'react'
 import "./pricecard.css"
+import {Link} from 'react-router-dom'
 const RatedCard = (props) => {
   return (
     <>
+     <Link to='/product-page' className='price-card-cont link'>
         <div className="price-card-cont">
             <div className="price-card-img">
             <img src={props.imgSrc} alt="card" />
@@ -18,6 +20,7 @@ const RatedCard = (props) => {
                 </div>
             </div>
         </div>
+     </Link>
     </>
   )
 }

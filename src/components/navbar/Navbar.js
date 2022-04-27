@@ -1,15 +1,19 @@
 import React, { useState } from "react";
+import {  Link } from "react-router-dom";
 import "./navbar.css";
-const Navbar = (props) => {
+
+const Navbar = () => {
   const [changeIcon, setChangeIcon] = useState("images/hamburger.png");
   const [isSidebar, setIsSideBar] = useState(false);
   const [isSideSearch, setIsSideSearch] = useState(false);
   return (
     <>
+    
 
       <div className="navbar">
         {/* side bar */}
-      <div className={isSidebar ? "sidebar-active" : "sidebar-section"}>
+     
+        <div className={isSidebar ? "sidebar-active" : "sidebar-section"}>
           <div className="sideBar-cont">
             <div className="sidebar-cancel">
               <img
@@ -20,35 +24,53 @@ const Navbar = (props) => {
             </div>
             <div className="nav-routes-sec">
               <div className="nav-route">
-                HOME
-                <img src="images/fill-right-arrow.png" alt="arrow" />
+              
+                <Link to='/' className="nav-route">
+                  HOME
+                  <img src="images/fill-right-arrow.png" alt="arrow" />
+                </Link>
               </div>
               <div className="nav-route">
-                shop
-                <img src="images/fill-right-arrow.png" alt="arrow" />
+               
+                <Link to='/shop' className="nav-route">
+                  shop
+                  <img src="images/fill-right-arrow.png" alt="arrow" />
+                </Link>
               </div>
               <div className="nav-route">
-                about us
-                <img src="images/fill-right-arrow.png" alt="arrow" />
+              
+                <Link to='/about-us' className="nav-route">
+                  about us
+                  <img src="images/fill-right-arrow.png" alt="arrow" />
+                </Link>
               </div>
               <div className="nav-route">
-                Customer Help
-                <img src="images/fill-right-arrow.png" alt="arrow" />
+               
+                <Link to='/customer' className="nav-route">
+                  Customer Help
+                  <img src="images/fill-right-arrow.png" alt="arrow" />
+                </Link>
               </div>
             </div>
             <hr />
             <div className="nav-main-route-sec">
               <div className="nav-main-route">
-                <div className="nav-route-img">
-                  <img src="images/wish-list.png" alt="wishlist" />
-                </div>
-                Wishlist
+                
+                <Link to='/wishlist' className="nav-main-route">
+                  <div className="nav-route-img">
+                    <img src="images/wish-list.png" alt="wishlist" />
+                  </div>
+                  Wishlist
+                </Link>
               </div>
               <div className="nav-main-route">
+
                 <div className="nav-route-img">
                   <img src="images/login.png" alt="wishlist" />
                 </div>
-                Login/register
+              
+                <Link to='/login' className="link-class">
+                  Login</Link>/<Link to='/register' className="link-class" >register</Link>
               </div>
             </div>
             <hr />
@@ -68,8 +90,10 @@ const Navbar = (props) => {
             </div>
           </div>
         </div>
+        
 
         <div className="nav-menu">
+        
 
           <div className="nav-menu-sec">
             <img
@@ -156,6 +180,7 @@ const Navbar = (props) => {
           </div>
         </div>
       </div>
+      
 
     </>
   );

@@ -2,7 +2,7 @@ import React from 'react'
 import "./log-reg.css"
 import Footer from '../footer/Footer'
 import Insta from '../instagram/Insta'
-
+import {Link} from 'react-router-dom'
 const Login = () => {
   return (
     <>
@@ -19,7 +19,7 @@ const Login = () => {
                     <input type="checkbox"  />
                     remember me
                 </div>
-                <span>Lost your password?</span>
+                <span> <Link to='/forget-password' className='link'> Lost your password?</Link></span>
                 </div>
             </form>
         </div>

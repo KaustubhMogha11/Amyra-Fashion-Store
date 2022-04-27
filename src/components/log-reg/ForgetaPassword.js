@@ -2,6 +2,7 @@ import React from 'react'
 import "./log-reg.css"
 import Footer from '../footer/Footer'
 import Insta from '../instagram/Insta'
+import { Link } from 'react-router-dom'
 const ForgetPassword = () => {
   return (
     <>
@@ -15,7 +16,7 @@ const ForgetPassword = () => {
             <div className="form-btn"><button>Send Mail With Magic Link</button></div>
             <div className="remember-me-cont">
             <div className="remember-me">
-                or Login
+            <Link to='/login' className='link'> Login</Link>
             </div>
             <span>Privacy Policy</span>
             </div>

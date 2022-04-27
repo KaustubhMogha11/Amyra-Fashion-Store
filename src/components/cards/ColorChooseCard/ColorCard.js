@@ -1,9 +1,11 @@
 import React,{useState} from 'react'
 import "./colorcard.css"
+import {Link} from 'react-router-dom'
 const RatedCard = () => {
     const[colorImg,setColorImg]=useState("images/category/jacket.jpg")
   return (
     <>
+      <Link to='/product-page' className='color-card-cont link'>
         <div className="color-card-cont">
             <div className="color-card-img">
                 <img src={colorImg} alt="card" />
@@ -23,6 +25,7 @@ const RatedCard = () => {
                 </div>
             </div>
         </div>
+        </Link>
     </>
   )
 }

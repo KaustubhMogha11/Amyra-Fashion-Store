@@ -9,7 +9,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 3rem;
+    margin-top: 3rem; 
+  }
+  .link{
+    text-decoration: none;
+    color: #000;
   }
   .form-heading {
     font-size: 40px;

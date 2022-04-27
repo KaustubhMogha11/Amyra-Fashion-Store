@@ -1,6 +1,6 @@
 import React from 'react'
 import "./bodysec.css"
-
+import {  Link } from "react-router-dom";
 const BodySection = () => {
   return (
     <>
@@ -17,10 +17,13 @@ const BodySection = () => {
             <div className="appreal">APPAREL</div>
             <div className="discover">DISCOVER</div>
             <div className="trends">New trends</div>
+            <Link to='/shop'>
             <div className="shop-now-btn">
               Shop 
               <span>Now!</span>
             </div>
+
+            </Link>
 
         </section>
     </>

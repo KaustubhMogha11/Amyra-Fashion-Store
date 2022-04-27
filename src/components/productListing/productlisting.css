@@ -185,6 +185,9 @@
 .category-item {
     font-size: .6rem;
 }
+.product-filterr-cont{
+    margin-top: 2rem;
+}
 @media (max-width: 480px){
     .product-body-filter-sec{
         position: absolute;
