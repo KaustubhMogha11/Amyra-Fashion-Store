@@ -2,6 +2,7 @@
     min-height: 25rem;
     width: 100%;
     max-height: auto;
+    background: url(../../../public/images/shop-header-bg.jpg) no-repeat center center/cover;
 }
 .wishlist-sec-heading{
     font-weight: 600;
@@ -13,7 +14,7 @@
     font-size: 4.375rem;
     line-height: 70px;
     text-align: center;
-    margin-top: 3rem;
+    padding-top: 3rem;
 }
 .wishlist-product-heading{
     display: flex;
