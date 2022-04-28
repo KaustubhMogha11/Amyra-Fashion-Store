@@ -1,0 +1,61 @@
+.contact-con-sec{
+    height: auto;
+    width: 100%;
+
+}
+.contact-sec-heading{
+    letter-spacing: 0px;
+    font-weight: 600;
+    font-style: normal;
+    color: #a8e8e2;
+    font-size: 4.375rem;
+    line-height: 70px;
+    text-align: center;
+    padding-top: 3rem;
+}
+.contact-card-cont{
+    margin-top: 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.contact-cards{
+    height: 15rem;
+    width: 15rem;
+    background-color: #f5ffff;
+    border-radius: 20px;
+    overflow: hidden;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: #a8e8e2;
+    cursor: pointer;
+    box-shadow: 0px 2px 43px -32px rgba(0,0,0,0.75),inset 0px 2px 43px -32px #a8e8e2  ;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+.contact-cards img{
+    width: 100%;
+}
+.c-mail{
+    font-size: 1.2rem;
+}
+@media (max-width: 626px)  {
+    .contact-card-cont{
+        height: auto;
+        flex-direction: column;
+
+    }
+    .contact-cards{
+        margin: 1.5rem 0;
+    }
+    .contact-sec-heading{
+        font-size: 2.3rem;
+    }
+}
+@media (min-width: 627px) and (max-width: 810px){
+    .contact-cards{
+        height: 12rem;
+        width: 12rem;
+    }
+} 

@@ -39,8 +39,8 @@ const Navbar = () => {
               </div>
               <div className="nav-route">
               
-                <Link to='/about-us' className="nav-route">
-                  about us
+              <Link to='/contact-us' className="nav-route">
+                  contact us
                   <img src="images/fill-right-arrow.png" alt="arrow" />
                 </Link>
               </div>
@@ -75,18 +75,18 @@ const Navbar = () => {
             </div>
             <hr />
             <div className="nav-social-links">
-              <a href="https://www.facebook.com/aryan.king.9484">
+            
                 <img src="images/facebook.png" alt="facebook" />
-              </a>
-              <a href="https://www.instagram.com/the___.inferno/">
+             
+            
                 <img src="images/instagram.png" alt="insta" />
-              </a>
-              <a href="https://www.linkedin.com/in/nishant-kumar-tiwari-253a46196">
+           
+             
                 <img src="images/linkedin.png" alt="linkedin" />
-              </a>
-              <a href="https://github.com/Asuraking1n/">
+             
+            
                 <img src="images/github.png" alt="github" />
-              </a>
+            
             </div>
           </div>
         </div>
@@ -117,7 +117,7 @@ const Navbar = () => {
             </div>
           </div>
           <div className="nav-menu-help">
-            NEED HELP ?<span>788-064-7182</span>
+            NEED HELP ?<span>999-999-9999</span>
           </div>
         </div>
         <div className="nav-logo">

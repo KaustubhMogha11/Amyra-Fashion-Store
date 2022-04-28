@@ -16,7 +16,7 @@ import {
 import Cart from "./components/cart/Cart";
 import WishList from "./components/wishlist/WishList";
 import Error404 from "./components/404errorpage/Error404";
-
+import ContactUs from './components/contact/ContactUs'
 function App() {
  
   return (
@@ -32,6 +32,7 @@ function App() {
             <Route exact path="/login" element={<Login />} />
             <Route exact path="/wishlist" element={<WishList/>} />
             <Route exact path="/cart" element={<Cart/>} />
+            <Route exact path="/contact-us" element={<ContactUs/>} />
             <Route exact path="/forget-password" element={<ForgetPassword />} />
             <Route exact path="/product-page" element={<SingleProductPage />} />
             <Route path="*" element={<Error404/>} />
