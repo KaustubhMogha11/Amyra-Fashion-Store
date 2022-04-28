@@ -1,0 +1,27 @@
+.error-cont-sec{
+    min-height: 20rem;
+    height: auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+.error-cont-heading{
+    font-size: 16rem;
+    font-weight: 600;
+    text-align: center;
+    color: #a8e8e2;
+    letter-spacing: 1px;
+}
+.error-cont-subheading{
+    letter-spacing: 1px;
+    font-weight: 600;
+    font-style: normal;
+    text-align: center;
+}
+@media (max-width: 480px)  {
+    .error-cont-heading{
+        font-size: 12rem;
+    }
+}
