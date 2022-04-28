@@ -1,0 +1,27 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KaustubhMogha11/Trend-Ecom.git"
+  },
+  "author": "km",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KaustubhMogha11/Trend-Ecom/issues"
+  },
+  "homepage": "https://github.com/KaustubhMogha11/Trend-Ecom#readme",
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "express": "^4.18.0",
+    "mongoose": "^6.3.1"
+  }
+}
