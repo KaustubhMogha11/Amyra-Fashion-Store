@@ -13,6 +13,7 @@ import {
   Routes,
   Route
 } from "react-router-dom";
+import Cart from "./components/cart/Cart";
 import WishList from "./components/wishlist/WishList";
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
             <Route exact path="/register" element={<Register />} />
             <Route exact path="/login" element={<Login />} />
             <Route exact path="/wishlist" element={<WishList/>} />
+            <Route exact path="/cart" element={<Cart/>} />
             <Route exact path="/forget-password" element={<ForgetPassword />} />
             <Route exact path="/product-page" element={<SingleProductPage />} />
           </Routes>

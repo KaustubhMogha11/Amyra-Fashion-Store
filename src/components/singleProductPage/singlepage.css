@@ -263,8 +263,8 @@
     padding: 2rem 3rem;
 }
 .review-cont{
-    height: 8rem;
-    width: 70%;
+    height: auto;
+    padding: .5rem 0;
     margin-left: 10%;
     display: flex;
 }

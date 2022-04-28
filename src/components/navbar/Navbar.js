@@ -121,7 +121,9 @@ const Navbar = () => {
           </div>
         </div>
         <div className="nav-logo">
-          <img src="images/logo1.jpeg" alt="logo" />
+        <Link to='/' className="nav-logo">
+          <img src="images/logo1.jpeg" alt="logo"  />
+          </Link>
         </div>
         <div className="nav-buttons">
           <div className="nav-btn-cont">
@@ -133,14 +135,17 @@ const Navbar = () => {
               />
             </div>
             <div className="nav-wishlist ">
+            <Link to='wishlist' className="nav-wishlist ">
               <img
                 src="images/wish-list.png"
                 alt="wishlist"
                 className="nav-btn-icon"
               />
               <span>0</span>
+              </Link>
             </div>
             <div className="nav-cart ">
+            <Link to='/cart' className="nav-cart ">
               <div className="nav-cart-data">
                 $0.99
                 <span>CART</span>
@@ -153,6 +158,7 @@ const Navbar = () => {
                 />
                 <span>0</span>
               </div>
+              </Link>
             </div>
           </div>
         </div>

@@ -45,7 +45,7 @@ const SingleProductPage = () => {
             </div>
             <div className="img-sec-main-img">
               <img src={imgShow} alt="main" />
-              {console.log(imgShow)}
+             
             </div>
           </div>
           <div className="single-product-description">
