@@ -5,7 +5,7 @@ const app = express();
 import Connection from './config/mongoose.js';
 import bodyParser from 'body-parser';
 import Routes from './routes/routes.js';
-
+import dotenv from 'dotenv';
 dotenv.config();
 
 
@@ -14,7 +14,7 @@ const password = process.env.DB_PASSWORD;
 
 app.use(bodyParser.json({ extended: true }));
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(cors());
+// app.use(cors());
 app.use('/', Routes);
 
 

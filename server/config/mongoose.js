@@ -5,7 +5,7 @@ const Connection = async (username, password) => {
 //    const URL =`mongodb+srv://${username}:${password}@ecommerce.qzj1m.mongodb.net/eCommerce?retryWrites=true&w=majority`;
     const URL = `mongodb+srv://${username}:${password}@cluster0.9xcni.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`;
     try {
-        await mongoose.connect(URL, { useUnifiedTopology: true, useNewUrlParser: true, useFindAndModify: false } );
+        await mongoose.connect(URL, { useUnifiedTopology: true, useNewUrlParser: true } );
         console.log('Database Connected Succesfully');
     } catch(error) {
         console.log('Error: ', error.message);
