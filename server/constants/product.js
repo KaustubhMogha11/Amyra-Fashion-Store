@@ -1,11 +1,4 @@
-// import { v4 as uuid } from "uuid";
-
-/**
- * Product Database can be added here.
- * You can add products of your wish with different attributes
- * */
-
- export const products = [
+export const products = [
     {
       _id: 'jrwngwngn-wjrngowrkglwrk-glkg',
       title: "FAME AND PARTNERS TALL VALENCIA MAXI DRESS",
