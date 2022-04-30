@@ -3,7 +3,8 @@ import "./log-reg.css"
 import Footer from '../footer/Footer'
 import Insta from '../instagram/Insta'
 import {Link} from 'react-router-dom'
-const Login = () => {
+import { authenticateSignup, authenticateLogin } from '../../service/api';
+const Login = ({ open, setOpen, setAccount }) => {
   return (
     <>
         <div className="log-reg-sec">
