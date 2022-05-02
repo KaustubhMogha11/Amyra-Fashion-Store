@@ -1,12 +1,21 @@
-import React,{useState} from 'react'
+import React,{useState,useEffect} from 'react'
 import RatedCard from '../cards/ratedCard/RatedCard'
 import PriceCard from '../cards/priceCard/PriceCard'
-import ColorCard from '../cards/ColorChooseCard/ColorCard'
+import { useSelector, useDispatch } from 'react-redux'; // hooks
 import Insta from '../instagram/Insta'
 import Footer from '../footer/Footer'
 import "./productlisting.css"
+import { getProducts as listProducts } from '../../redux/actions/productActions';
+import { Link } from 'react-router-dom';
+
 const ProductiListing = () => {
     const [isfilter,setIsfilter] = useState("")
+    const {products}=useSelector(state => state.getProducts);
+    const dispatch = useDispatch();
+
+    useEffect(() => {
+        dispatch(listProducts())
+    }, [dispatch])
     return (
         <>
             <div className="productlist-sec">
@@ -101,15 +110,33 @@ const ProductiListing = () => {
                            <span> Showing 16 results
                             <img src="images/filter.png" alt="filter" className='filter-img' onClick={()=>setIsfilter("filter-active")}/></span>
                             <div className="product-card-cont">
-                                <RatedCard imgSrc="images/card/shirt-1.jpeg" name={"ELEMENT BUFFALO PLAID FLANNEL SHIRT IN REGULAR FIT"} />
-                                <ColorCard />
-                                <PriceCard imgSrc={"images/card/shirt-2.jpeg"} name={"SELECTED HOME OVERCOAT"} />
-                                <PriceCard imgSrc={"images/card/women-1.jpeg"} name={"MISSGUIDED RIBBED WRAP FRONT SLEEVELESS CROP TOP"} />
-                                <RatedCard imgSrc="images/card/women-2.jpeg" name={"FAME AND PARTNERS TALL VALENCIA MAXI DRESS"} />
-                                <PriceCard imgSrc={"images/card/women-3.jpeg"} name={"LAVISH ALICE DEEP BANDEAU ASYMMETRIC HEM MIDI DRESS"} />
-                                <ColorCard />
-                                <PriceCard imgSrc={"images/card/women-1.jpeg"} name={"MISSGUIDED RIBBED WRAP FRONT SLEEVELESS CROP TOP"}/>
-                                <RatedCard imgSrc="images/card/shirt-1.jpeg" name={"ELEMENT BUFFALO PLAID FLANNEL SHIRT IN REGULAR FIT"} />
+                               
+                            {
+                    products.map(temp => (
+                       <>
+                        <RatedCard imgSrcTwo={temp.imgTwo} imgSrcOne={temp.imgOne} stock={temp.stock} name={temp.title} price={temp.price} type={temp.type} />
+
+{/* <PriceCard imgSrcTwo={temp.imgTwo} imgSrcOne={temp.imgOne} stock={temp.stock} name={products.name} /> */}
+{/* <PriceCard imgSrcTwo={temp.imgTwo} imgSrcOne={temp.imgOne} stock={temp.stock} name={products.name} /> */}
+{/* <RatedCard imgSrcTwo={temp.imgTwo} imgSrcOne={temp.imgOne} stock={temp.stock} name={products.name} /> */}
+{/* <PriceCard imgSrcTwo={temp.imgTwo} imgSrcOne={temp.imgOne} name={products.name} /> */}
+
+{/* <PriceCard imgSrcTwo={temp.imgTwo} imgSrcOne={temp.imgOne} stock={temp.stock} name={products.name}/> */}
+{/* <RatedCard imgSrcTwo={temp.imgTwo} imgSrcOne={temp.imgOne} stock={temp.stock} name={products.name} /> */}
+                      </>
+                    ))
+                }
+
+                {/* <RatedCard imgSrcTwo={'images/card/shirt-2.jpeg'} imgSrcOne={"images/card/shirt-1.jpeg"} stock={false} name={"ELEMENT BUFFALO PLAID FLANNEL SHIRT IN REGULAR FIT"} />
+
+<PriceCard imgSrcTwo={'images/card/shirt-1.jpeg'} imgSrcOne={"images/card/shirt-2.jpeg"} stock={true} name={"SELECTED HOME OVERCOAT"} />
+<PriceCard imgSrcTwo={'images/card/women-2.jpeg'} imgSrcOne={"images/card/women-1.jpeg"} stock={true} name={"MISSGUIDED RIBBED WRAP FRONT SLEEVELESS CROP TOP"} />
+<RatedCard imgSrcTwo={'images/card/women-1.jpeg'} imgSrcOne="images/card/women-2.jpeg" stock={true} name={"FAME AND PARTNERS TALL VALENCIA MAXI DRESS"} />
+<PriceCard imgSrcTwo={'images/card/women-2.jpeg'} imgSrcOne={"images/card/women-3.jpeg"} name={"LAVISH ALICE DEEP BANDEAU ASYMMETRIC HEM MIDI DRESS"} />
+
+<PriceCard imgSrcTwo={'images/card/women-2.jpeg'} imgSrcOne={"images/card/women-1.jpeg"} stock={true} name={"MISSGUIDED RIBBED WRAP FRONT SLEEVELESS CROP TOP"}/>
+<RatedCard imgSrcTwo={'images/card/shirt-2.jpeg'} imgSrcOne="images/card/shirt-1.jpeg" stock={true} name={"ELEMENT BUFFALO PLAID FLANNEL SHIRT IN REGULAR FIT"} /> */}
+                            
                             </div>
                         </div>
                     </div>
