@@ -34,7 +34,7 @@ function App() {
             <Route exact path="/cart" element={<Cart/>} />
             <Route exact path="/contact-us" element={<ContactUs/>} />
             <Route exact path="/forget-password" element={<ForgetPassword />} />
-            <Route exact path="/product-page" element={<SingleProductPage />} />
+            <Route exact path="/shop/:id" element={<SingleProductPage />} />
             <Route path="*" element={<Error404/>} />
           </Routes>
         </div>

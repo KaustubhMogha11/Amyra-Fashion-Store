@@ -1,65 +1,88 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import StarRate from "../cards/ratedCard/StarRate";
 import Insta from "../instagram/Insta";
 import Footer from "../footer/Footer";
 import AdditionalInfo from "./AdditionalInfo";
 import Review from "./Review";
 import "./singlepage.css";
+import { Link } from "react-router-dom";
+
+import { getProducts as listProducts } from '../../redux/actions/productActions';
+import { useSelector, useDispatch } from 'react-redux'; // hooks
+
 const SingleProductPage = () => {
   const [imgShow, setImgShow] = useState("images/singlepage/image1.jpg");
   const [isReview, setIsReview] = useState(false);
+  const [isfilter,setIsfilter] = useState("")
+  const {products}=useSelector(state => state.getProducts);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+      dispatch(listProducts())
+  }, [dispatch])
   return (
-    <>
+    <>{!products?
+      (
+        <>
+        <div className="error-sec">
+          <img src="https://c.tenor.com/51cJwccNPl4AAAAi/capoo-bugcat.gif" alt="load" /> 
+          <span>Sorry we got some Error. Please go back</span>
+          </div>
+        </>
+      )
+      :(<>
       <div className="single-product-sec-cont">
         <div className="single-product-cont">
           <div className="single-product-img-sec">
             <div className="img-sec-small">
               <div className="smallimg-item">
                 <img
-                  src="images/singlepage/image1.jpg"
-                  onClick={() => setImgShow("images/singlepage/image1.jpg")}
+                  src={products.imgOne}
+                  onClick={() => setImgShow(products.imgOne)}
                   alt="item"
                 />
               </div>
               <div className="smallimg-item">
                 <img
-                  src="images/singlepage/subimage1.jpg"
-                  onClick={() => setImgShow("images/singlepage/subimage1.jpg")}
+                  src={products.imgTwo}
+                  onClick={() => setImgShow(products.imgTwo)}
                   alt="item"
                 />
               </div>
               <div className="smallimg-item">
                 <img
-                  src="images/singlepage/subimage2.jpg"
-                  onClick={() => setImgShow("images/singlepage/subimage2.jpg")}
+                 src={products.imgThree}
+                  onClick={() => setImgShow(products.imgThree)}
                   alt="item"
                 />
               </div>
               <div className="smallimg-item">
                 <img
-                  src="images/singlepage/subimage3.jpg"
-                  onClick={() => setImgShow("images/singlepage/subimage3.jpg")}
+                   src={products.imgFour}
+                  onClick={() => setImgShow(products.imgFour)}
                   alt="item"
                 />
               </div>
             </div>
             <div className="img-sec-main-img">
-              <img src={imgShow} alt="main" />
+            <img src={ imgShow.length<1?products.imgOne:imgShow} alt="main" />
              
             </div>
           </div>
           <div className="single-product-description">
             <div className="go-back">
-              <img src="images/fill-right-arrow.png" alt="arrow" />
+            <Link to='/shop' className="go-back">
+              <img src="/images/fill-right-arrow.png" alt="arrow" />
               BACK
+            </Link>
             </div>
             <StarRate />
             <div className="product-name">
-              FAME AND PARTNERS TALL VALENCIA MAXI DRESS
+            {products.title}
             </div>
             <div className="product-price">
-              <span>₹500</span>
-              ₹400
+            <span>₹10000</span>
+              ₹{products.price}
             </div>
             <p className="product-des">
               With an eye to the catwalks, Fame and Partners Tall apply their
@@ -79,11 +102,11 @@ const SingleProductPage = () => {
         <div className="product-tags">
           <div className="products-cat">
             <span>Categories:</span>
-            Clothing, Women's Dresses
+            {products.categoryName}
           </div>
           <div className="products-cat">
             <span>Tags:</span>
-            dress, green
+            {products.tags}
           </div>
         </div>
         <div className="review-additionInfo-cont">
@@ -91,7 +114,7 @@ const SingleProductPage = () => {
           <span onClick={() => setIsReview(true)}>reviews</span>
         </div>
         {!isReview ? (
-          <AdditionalInfo />
+          <AdditionalInfo size={products.size}/>
         ) : (
           <div className="review-sec">
             <div className="show-review-sec">
@@ -123,6 +146,7 @@ const SingleProductPage = () => {
         <Insta />
         <Footer />
       </div>
+      </>)}
     </>
   );
 };

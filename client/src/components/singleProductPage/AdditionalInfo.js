@@ -1,6 +1,6 @@
 import React from 'react'
 import "./singlepage.css"
-const AdditionalInfo = () => {
+const AdditionalInfo = (props) => {
   return (
     <>
         <div className="additional-info">
@@ -10,7 +10,7 @@ const AdditionalInfo = () => {
             </div>
             <div className="additional-info-item">
                 <span>sizes</span>
-                L, S, M, XL, US-8
+                {props.size}
             </div>
         </div>
     </>
