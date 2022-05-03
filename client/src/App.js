@@ -11,7 +11,8 @@ import ForgetPassword from "./components/log-reg/ForgetaPassword";
 import {
   BrowserRouter as Router,
   Routes,
-  Route
+  Route,
+ 
 } from "react-router-dom";
 import Cart from "./components/cart/Cart";
 import WishList from "./components/wishlist/WishList";
@@ -34,7 +35,7 @@ function App() {
             <Route exact path="/cart" element={<Cart/>} />
             <Route exact path="/contact-us" element={<ContactUs/>} />
             <Route exact path="/forget-password" element={<ForgetPassword />} />
-            <Route exact path="/shop/:id" element={<SingleProductPage />} />
+            <Route exact path="/product/:id" element={<SingleProductPage />} />
             <Route path="*" element={<Error404/>} />
           </Routes>
         </div>

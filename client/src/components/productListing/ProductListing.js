@@ -6,12 +6,13 @@ import Insta from '../instagram/Insta'
 import Footer from '../footer/Footer'
 import "./productlisting.css"
 import { getProducts as listProducts } from '../../redux/actions/productActions';
-import { Link } from 'react-router-dom';
+import { Link,useNavigate } from 'react-router-dom';
 
 const ProductiListing = () => {
     const [isfilter,setIsfilter] = useState("")
     const {products}=useSelector(state => state.getProducts);
     const dispatch = useDispatch();
+    const navigate=useNavigate();
 
     useEffect(() => {
         dispatch(listProducts())
@@ -107,15 +108,16 @@ const ProductiListing = () => {
                     </div>
                     <div className="product-body-card-sec">
                         <div className="product-cat-item">
-                           <span> Showing 16 results
+                           <span> Showing 15 results
                             <img src="images/filter.png" alt="filter" className='filter-img' onClick={()=>setIsfilter("filter-active")}/></span>
                             <div className="product-card-cont">
                                
                             {
-                    products.map(temp => (
+                    products.map((temp,index) => (
                        <>
-                        <RatedCard imgSrcTwo={temp.imgTwo} imgSrcOne={temp.imgOne} stock={temp.stock} name={temp.title} price={temp.price} type={temp.type} />
-
+                       {/* <Link to={`/product/${temp._id}`} style={{textDecoration: 'none'}}> */}
+                        <RatedCard key={index} id={temp.id} imgSrcTwo={temp.imgTwo} imgSrcOne={temp.imgOne} stock={temp.stock} name={temp.title} price={temp.price} type={temp.type} />
+                        {/* </Link> */}
 {/* <PriceCard imgSrcTwo={temp.imgTwo} imgSrcOne={temp.imgOne} stock={temp.stock} name={products.name} /> */}
 {/* <PriceCard imgSrcTwo={temp.imgTwo} imgSrcOne={temp.imgOne} stock={temp.stock} name={products.name} /> */}
 {/* <RatedCard imgSrcTwo={temp.imgTwo} imgSrcOne={temp.imgOne} stock={temp.stock} name={products.name} /> */}

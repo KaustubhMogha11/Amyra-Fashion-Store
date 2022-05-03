@@ -3,7 +3,7 @@ import mongoose from 'mongoose';
 // import autoIncrement from 'mongoose-auto-increment';
 
 const productSchema = new mongoose.Schema({
-    _id: String,
+    id: String,
     imgOne: String,
     imgTwo: String,
     imgThree: String,

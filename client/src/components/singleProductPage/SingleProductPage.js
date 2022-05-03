@@ -5,23 +5,40 @@ import Footer from "../footer/Footer";
 import AdditionalInfo from "./AdditionalInfo";
 import Review from "./Review";
 import "./singlepage.css";
-import { Link } from "react-router-dom";
+import { useParams,Link } from 'react-router-dom';
 
-import { getProducts as listProducts } from '../../redux/actions/productActions';
-import { useSelector, useDispatch } from 'react-redux'; // hooks
+import { getProductById } from '../../service/api';
+import { useDispatch, useSelector } from 'react-redux';
 
-const SingleProductPage = () => {
-  const [imgShow, setImgShow] = useState("images/singlepage/image1.jpg");
+import { getProductDetails } from '../../redux/actions/productActions';
+
+const SingleProductPage = (match) => {
+
+  const {id}=useParams();
+  console.log(id);
   const [isReview, setIsReview] = useState(false);
-  const [isfilter,setIsfilter] = useState("")
-  const {products}=useSelector(state => state.getProducts);
-  const dispatch = useDispatch();
+  // const [isfilter,setIsfilter] = useState("")
 
+  const productDetails = useSelector(state => state.getProductDetails);
+  const { loading, product} = productDetails;
+
+  const dispatch = useDispatch();
+  
   useEffect(() => {
-      dispatch(listProducts())
-  }, [dispatch])
+    console.log(product)
+           
+          dispatch(getProductDetails(id));
+           
+  }, [dispatch]);
+   
+  
+      
+  const [imgShow, setImgShow] = useState(product?.imgOne);
   return (
-    <>{!products?
+    <>
+    
+    {
+      !loading && !product?
       (
         <>
         <div className="error-sec">
@@ -37,35 +54,35 @@ const SingleProductPage = () => {
             <div className="img-sec-small">
               <div className="smallimg-item">
                 <img
-                  src={products.imgOne}
-                  onClick={() => setImgShow(products.imgOne)}
+                  src={product?.imgOne}
+                  onClick={() => setImgShow(product?.imgOne)}
                   alt="item"
                 />
               </div>
               <div className="smallimg-item">
                 <img
-                  src={products.imgTwo}
-                  onClick={() => setImgShow(products.imgTwo)}
+                  src={product?.imgTwo}
+                  onClick={() => setImgShow(product?.imgTwo)}
                   alt="item"
                 />
               </div>
               <div className="smallimg-item">
                 <img
-                 src={products.imgThree}
-                  onClick={() => setImgShow(products.imgThree)}
+                 src={product?.imgThree}
+                  onClick={() => setImgShow(product?.imgThree)}
                   alt="item"
                 />
               </div>
               <div className="smallimg-item">
                 <img
-                   src={products.imgFour}
-                  onClick={() => setImgShow(products.imgFour)}
+                   src={product?.imgFour}
+                  onClick={() => setImgShow(product?.imgFour)}
                   alt="item"
                 />
               </div>
             </div>
             <div className="img-sec-main-img">
-            <img src={ imgShow.length<1?products.imgOne:imgShow} alt="main" />
+            <img src={ imgShow?.length<1?product?.imgOne:imgShow} alt="main" />
              
             </div>
           </div>
@@ -78,11 +95,11 @@ const SingleProductPage = () => {
             </div>
             <StarRate />
             <div className="product-name">
-            {products.title}
+            {product?.title}
             </div>
             <div className="product-price">
             <span>₹10000</span>
-              ₹{products.price}
+              ₹{product?.price}
             </div>
             <p className="product-des">
               With an eye to the catwalks, Fame and Partners Tall apply their
@@ -102,11 +119,11 @@ const SingleProductPage = () => {
         <div className="product-tags">
           <div className="products-cat">
             <span>Categories:</span>
-            {products.categoryName}
+            {product?.categoryName}
           </div>
           <div className="products-cat">
             <span>Tags:</span>
-            {products.tags}
+            {product?.tags}
           </div>
         </div>
         <div className="review-additionInfo-cont">
@@ -114,7 +131,7 @@ const SingleProductPage = () => {
           <span onClick={() => setIsReview(true)}>reviews</span>
         </div>
         {!isReview ? (
-          <AdditionalInfo size={products.size}/>
+          <AdditionalInfo size={product?.size}/>
         ) : (
           <div className="review-sec">
             <div className="show-review-sec">
@@ -146,7 +163,9 @@ const SingleProductPage = () => {
         <Insta />
         <Footer />
       </div>
-      </>)}
+       </>)
+    }
+  
     </>
   );
 };
