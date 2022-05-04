@@ -11,7 +11,10 @@
     display: flex;
     align-items: center;
     padding: 0 1rem;
-
+    
+}
+.negQuantity{
+    color: red;
 }
 .wish-list-img-sec{
     display: flex;
@@ -30,7 +33,7 @@
     height: 1.5rem;
     width: 1.5rem;
     cursor: pointer;
-
+    
 }
 .Cart-img{
     height: 70%;
@@ -61,7 +64,7 @@
     .Cart-card-cont{
         width: 90%;
     }
-
+    
     .Cart-cancel{
         margin-right: 1rem;
     }
@@ -88,4 +91,4 @@
     .Cart-card-item span{
         margin-left: 5rem;
     }
-} 
+}

@@ -50,6 +50,7 @@
 .nav-menu-icon img{
     height: 50%;
 }
+
 .nav-menu-text{
     height: 100%;
     width: 5rem;
@@ -64,6 +65,7 @@
     font-style: normal;
     color: rgb(39, 37, 37);
 }
+
 .nav-menu-help{
     height: 100%;
     width: 50%;
@@ -81,6 +83,8 @@
     font-weight: 600;
     color: rgb(39, 37, 37);
 }
+
+
 .nav-logo{
     height: 100%;
     width: 20%;
@@ -91,6 +95,8 @@
 .nav-logo img{
     height: 100%;
 }
+
+
 .nav-buttons{
     height: 100%;
     width: 40%;
@@ -126,22 +132,24 @@
     position: relative;
     cursor: pointer;
 }
+
 .nav-wishlist img{
     height: 30%;
     position: relative;
 }
 .nav-wishlist span{
-    padding: 1px 6px;
+    padding: 3px 6px;
     border-radius: 50%;
     box-shadow: 2px 2px 10px 0px rgb(143 197 192 / 40%);
-    font-size: 9px;
+    font-size: 12px;
     line-height: 16px;
-    font-weight: 300;
+    font-weight: 600;
+    letter-spacing: 1px;
     text-align: center;
     background-color: #a8e8e2;
     position: absolute;
-    right: 10%;
-    bottom: 25%;
+    right: .3rem;
+    bottom: .8rem;
 }
 .nav-cart{
     height: 100%;
@@ -152,8 +160,11 @@
     cursor: pointer;
 }
 .nav-cart img{
-    height: 40%;
+    height: 35%;
     position: relative;
+}
+.nav-shop img{
+    height: 2.3rem;
 }
 .nav-cart-data{
     height: 100%;
@@ -177,24 +188,34 @@
     align-items: center;
     position: relative;
 }
+
 .nav-cart-icon-sec span{
-    padding: 1px 6px;
+    padding: 3px 6px;
     border-radius: 50%;
     box-shadow: 2px 2px 10px 0px rgb(143 197 192 / 40%);
-    font-size: 9px;
+    font-size: 12px;
     line-height: 16px;
-    font-weight: 300;
+    font-weight: 600;
+    letter-spacing: 1px;
     text-align: center;
     background-color: #a8e8e2;
     position: absolute;
-    right: .5rem;
-    bottom: 1rem;
+    right: .3rem;
+    bottom: .8rem;
 }
+
+
+
+
+
+
+
 /* side search */
+
 .sideSearch-sec{
     height: 100vh;
     width: 100vw;
-    position: absolute;
+    position: fixed;
     top: -120%;
     display: flex;
     opacity: 0;
@@ -207,7 +228,7 @@
 .sideSearch-active{
     height: 100vh;
     width: 100vw;
-    position: absolute;
+    position: fixed;
     opacity: 1;
     top: 0;
     right: 0;
@@ -226,7 +247,6 @@
 }
 .search-title{
     height: auto;
-   
     width: 100%;
     color: #a8e8e2;
     text-transform: uppercase;
@@ -244,7 +264,6 @@
 }
 .search-box{
     height: 3rem;
-    
     width: 100%;
     margin-top: 5rem;
     display: flex;
@@ -255,7 +274,6 @@
 }
 .search-box input{
     height: 100%;
-   
     width: 100%;
     border: none;
     outline: none;
@@ -273,13 +291,19 @@
     height: 40%;
 }
 .search-text{
-   
+    height: 15rem;
+    overflow: auto;
     width: 100%;
     letter-spacing: 2px;
     line-height: 20px;
     font-size: .8rem;
     margin-top: 5rem;
 }
+
+
+
+
+
 /* side bar  */
 .sidebar-section{
     height: 100vh;
@@ -333,6 +357,7 @@
     font-style: normal;
     font-size: 1.2rem;
     cursor: pointer;
+    color: #000;
 }
 .nav-route img{
     height: 30%;
@@ -365,10 +390,11 @@ hr{
     display: flex;
     align-items: center;
     color: #000;
-
+    
 }
 .link-class{
     text-decoration: none;
+    color: #000;
 }
 .nav-route-img{
     height: 100%;
@@ -392,7 +418,24 @@ hr{
 }
 .nav-social-links a img{
     height: 1.5rem;
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* mobile  */
 @media (max-width: 480px) {
     /* body{
@@ -428,6 +471,7 @@ hr{
     }
     .nav-main-route{
         width: 100%;
+        color: #000;
     }
     .nav-routes-sec{
         width: 100%;
@@ -464,4 +508,5 @@ hr{
     .search-cont{
         width: 70%;
     }
+
 }

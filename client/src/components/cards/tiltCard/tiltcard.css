@@ -20,7 +20,7 @@
     width: 100%;
     z-index: -1;
     transition: all  1s;
-
+    
 }
 .tilt-card-con:hover img{
     transform: rotate(6deg) scale(1.1);
@@ -61,7 +61,7 @@
     line-height: 40px;
     transform: translateZ(500px);
     border: 2px solid #fff;
-
+    
 }
 .card-text-overlay span{
     font-size: 1rem;
@@ -77,6 +77,8 @@
     transform: perspective(1000px);
 }
 
+
+
 @media (max-width: 480px) {
     .tilt-card-con{
         width: 6.2rem;
@@ -90,6 +92,24 @@
         font-size: .5rem;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @keyframes border-show{
     0%,50%{
@@ -106,4 +126,4 @@
         transform:  rotate(0deg) scale(1);
         border: 2px solid #fff;
     }
-} 
+}

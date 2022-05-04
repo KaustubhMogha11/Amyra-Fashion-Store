@@ -10,7 +10,7 @@
     display: flex;
     align-items: center;
     padding: 0 1rem;
-
+    
 }
 .wish-list-img-sec{
     display: flex;
@@ -29,7 +29,7 @@
     height: 1.5rem;
     width: 1.5rem;
     cursor: pointer;
-
+    
 }
 .wishlist-img{
     height: 70%;
@@ -59,7 +59,7 @@
     .wishlist-card-cont{
         width: 90%;
     }
-
+    
     .wishlist-cancel{
         margin-right: 1rem;
     }
@@ -86,4 +86,4 @@
     .wishlist-card-item span{
         margin-left: 5rem;
     }
-} 
+}

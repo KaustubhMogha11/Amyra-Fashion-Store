@@ -7,7 +7,7 @@ import Review from "./Review";
 import "./singlepage.css";
 import { useParams,Link } from 'react-router-dom';
 
-import { getProductById } from '../../service/api';
+
 import { useDispatch, useSelector } from 'react-redux';
 
 import { getProductDetails } from '../../redux/actions/productActions';
@@ -33,7 +33,7 @@ const SingleProductPage = (match) => {
    
   
       
-  const [imgShow, setImgShow] = useState(product?.imgOne);
+  const [imgShow, setImgShow] = useState('');
   return (
     <>
     
@@ -102,9 +102,8 @@ const SingleProductPage = (match) => {
               ₹{product?.price}
             </div>
             <p className="product-des">
-              With an eye to the catwalks, Fame and Partners Tall apply their
-              cool and individual style to a collection of hand-curated designs,
-              exclusively for ASOS.
+             {product?.description}
+             {!product?.stock?<span className="outOfStockTextShow">Out of stock</span>:null}
             </p>
             <div className="product-card-btn-cont">
               <input type="text" placeholder="1" />
@@ -160,8 +159,8 @@ const SingleProductPage = (match) => {
             </div>
           </div>
         )}
-        <Insta />
-        <Footer />
+        <Insta/>
+        <Footer/>
       </div>
        </>)
     }

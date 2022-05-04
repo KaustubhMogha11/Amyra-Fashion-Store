@@ -4,7 +4,8 @@
     width: 100%;
     position: relative;
     overflow: hidden;
-    /* animation: colors 15s infinite 3s; */
+    
+    
 }
 .background-img{
     height: 110%;
@@ -28,7 +29,8 @@
     z-index: 2;
     font-size: 1.6rem;
     filter: blur(1px);
-    color: rgba(0, 0, 0, 0.2);animation: little-big  infinite 8s ease-in-out 2s,colors 15s infinite 3s;
+    color: rgba(0, 0, 0, 0.2);
+    animation: little-big  infinite 8s ease-in-out 2s,colors 15s infinite 3s;
 }
 .vintage{
     color: #a8ece6;
@@ -40,7 +42,6 @@
     font-size: 2.7rem;
     filter: blur(.2px);
     animation: big-little  infinite 7s ease-in-out 0s,colors 15s infinite 3s;
-
 }
 .couture{
     font-family: 'Montserrat', sans-serif;
@@ -254,7 +255,7 @@
         width: 120%;
         height:80%;
     }
-
+    
     .discover{
         font-size: 10rem;
     }
@@ -368,4 +369,4 @@
     100% {
         transform: scale(1.2)
     } 
-} 
+}
