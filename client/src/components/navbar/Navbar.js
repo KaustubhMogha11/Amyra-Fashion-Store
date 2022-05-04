@@ -1,11 +1,23 @@
-import React, { useState } from "react";
-import {  Link } from "react-router-dom";
+import React, { useState,useEffect } from "react";
+import {  Link,useParams } from "react-router-dom";
 import "./navbar.css";
+import { getProducts as listProducts } from '../../redux/actions/productActions';
+import { useSelector, useDispatch } from 'react-redux'; // hooks
+import SearchCard from "../cards/searchCard/SearchCard";
 
 const Navbar = () => {
   const [changeIcon, setChangeIcon] = useState("images/hamburger.png");
   const [isSidebar, setIsSideBar] = useState(false);
   const [isSideSearch, setIsSideSearch] = useState(false);
+  const [searchProduct, setSearchProduct] = useState('')
+  const {products}=useSelector(state => state.getProducts);
+    const dispatch = useDispatch();
+    
+
+    useEffect(() => {
+        dispatch(listProducts())
+    }, [dispatch])
+
   return (
     <>
     
@@ -122,7 +134,7 @@ const Navbar = () => {
         </div>
         <div className="nav-logo">
         <Link to='/' className="nav-logo">
-          <img src="images/logo1.jpeg" alt="logo"  />
+            <img src="/images/logo1.jpeg" alt="logo" />
           </Link>
         </div>
         <div className="nav-buttons">
@@ -135,31 +147,34 @@ const Navbar = () => {
               />
             </div>
             <div className="nav-wishlist ">
-            <Link to='wishlist' className="nav-wishlist ">
-              <img
-                src="images/wish-list.png"
-                alt="wishlist"
-                className="nav-btn-icon"
-              />
-              <span>0</span>
-              </Link>
-            </div>
-            <div className="nav-cart ">
-            <Link to='/cart' className="nav-cart ">
-              <div className="nav-cart-data">
-                $0.99
-                <span>CART</span>
-              </div>
-              <div className="nav-cart-icon-sec">
+            <Link to='wishlist' className="nav-wishlist "> 
                 <img
-                  src="images/cart.png"
-                  alt="cart"
+                 src="/images/wish-list.png"
+                  alt="wishlist"
                   className="nav-btn-icon"
                 />
                 <span>0</span>
-              </div>
+              
+            </Link>
+            </div>
+            <div className="nav-cart ">
+              <Link to='/cart' className="nav-cart ">
+                <div className="nav-cart-data">
+                  $0.99
+                  <span>CART</span>
+                </div>
+                <div className="nav-cart-icon-sec">
+                  <img
+                    src="/images/cart.png"
+                    alt="cart"
+                    className="nav-btn-icon"
+                  />
+                  <span>0</span>
+
+                </div>
               </Link>
             </div>
+
           </div>
         </div>
       </div>
@@ -175,14 +190,26 @@ const Navbar = () => {
             />
           </div>
           <div className="search-box">
-            <input type="text" placeholder="Search for :" />
+          <input type="text" placeholder="Search for :" onChange={(e) => setSearchProduct(e.target.value)} />
             <div className="search-icon-img">
               <img src="images/search-light.png" alt="search" />
             </div>
           </div>
           <div className="search-text">
-            Find your product with fast search. Enter some keyword such as
-            dress, jacket etc.
+          {searchProduct.length < 2 ? <span>Find your product with fast search. Enter some keyword such as
+              dress, jacket etc.</span> : (
+              <>
+                {
+                  products.filter((filterData) => filterData.title.toLowerCase().includes(searchProduct.toLowerCase()) ? filterData : null)
+                    .map((items) => {
+                      return (
+                        <SearchCard id={items.id} imgSrc={items.imgOne} title={items.title} price={items.price} />
+                      )
+                    })
+                }
+
+              </>
+            )}
           </div>
         </div>
       </div>

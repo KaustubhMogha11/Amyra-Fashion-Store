@@ -1,0 +1,39 @@
+.search-card-cont{
+    height: 5.5rem;
+    width: 100%;
+    margin: 1rem 0;
+    display: flex;
+    border: 1px solid #f1f1ee;
+    cursor: pointer;
+
+}
+.searchLink{
+    text-decoration: none;
+    color: #000;
+}
+.search-card-img-sec{
+    height: 100%;
+    width: 28%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.search-card-img-sec img{
+    height: 85%;
+    width: 85%;
+}
+.search-card-title-sec{
+    height: 100%;
+    width: 70%;
+    padding: 5px 4px;
+    display: flex;
+    flex-direction: column;
+}
+.search-card-title-sec span{
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: .4rem;
+} 
