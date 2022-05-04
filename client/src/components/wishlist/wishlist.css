@@ -32,7 +32,7 @@
     width: 26%;
     display: flex;
     align-items:center ;
-
+    
 }
 .wishlist-heading-second span{
     margin-right: 4rem;
@@ -66,5 +66,5 @@
     .wishlist-sec-heading{
         font-size: 3rem;
     }
-
-} 
+    
+}

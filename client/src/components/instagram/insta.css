@@ -42,6 +42,8 @@ transition: all .5s;
 white-space: nowrap;
 font-size: 14px;
 font-weight: 600;
+text-decoration: none;
+color: #000;
 text-transform: uppercase;
 letter-spacing: 4px;
 -webkit-transform: translate(-50%,-50%);
@@ -67,5 +69,5 @@ box-shadow: 0 0 20px 0 rgb(0 0 0 / 10%);
     .instagram-cont{
         height: auto;
     }
-
-} 
+   
+}

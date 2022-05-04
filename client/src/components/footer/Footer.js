@@ -36,15 +36,15 @@ const Footer = () => {
                     <input type="text" placeholder='your email address' />
                     <button>susbcribe</button>
                 </div>
-                <div className="payments-sec"><img src="images/payment.png" alt="payment" /></div>
-
+                <div className="payments-sec"><img src="/images/payment.png" alt="payment" /></div>
+                
                 </div>
                 </div>
             <div className="footer-social-links">
                 <div className="footer-links-cont">
-                    <img src="images/social/twitter.png" alt="twitter" />
-                    <img src="images/social/facebook.png" alt="facebook" />
-                    <img src="images/social/pinterest.png" alt="pintrest" />
+                    <img src="/images/social/twitter.png" alt="twitter" />
+                    <img src="/images/social/facebook.png" alt="facebook" />
+                    <img src="/images/social/pinterest.png" alt="pintrest" />
                 </div>
             </div>
             <div className="footer-copyright">

@@ -3,7 +3,6 @@
     width: 100%;
     padding:0 3rem;
     animation: colors 15s infinite;
-
 }
 .footer-sec-cont{
     width: 100%;
@@ -44,7 +43,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-
+    
 }
 
 .footer-news-letter span{
@@ -148,7 +147,7 @@
     .footer-data-sec{
         flex-direction: column;
         width: 100%;
-
+        
     }
     .footer-news-letter{
         width: 100%;
@@ -176,7 +175,7 @@
         width: 10rem;
         left: 20%;
     }
-
+    
 }
 @media (min-width: 481px) and (max-width: 810px){
     .footer-news-letter span{
@@ -184,7 +183,7 @@
         width: 80%;
         display: flex;
         padding-left: 2rem;
-
+        
     }
     .data-cont{
         align-items: start;
@@ -198,4 +197,4 @@
     .footer-links-cont{
         left: 35%;
     }
-} 
+}
