@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom'
 const SearchCard = (props) => {
   return (
     <>
-    <Link to={`/shop/${props.id}`} className='searchLink'>
+    <Link to={`/product/${props.id}`} className='searchLink'>
         <div className="search-card-cont">
             <div className="search-card-img-sec">
                 <img src={props.imgSrc} alt="profile" />
