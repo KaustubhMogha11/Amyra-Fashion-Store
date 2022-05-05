@@ -21,7 +21,7 @@ const BestSelling = () => {
         {products.slice(4,9).map((val,index)=>{
                 return(
                     <div key={index}>
-                    <PriceCard ifD={val.id} imgSrcTwo={val.imgTwo} imgSrcOne={val.imgOne} stock={val.stock} name={val.title} type={val.type} price={val.price}/>
+                    <PriceCard id={val.id} imgSrcTwo={val.imgTwo} imgSrcOne={val.imgOne} stock={val.stock} name={val.title} type={val.type} price={val.price}/>
                     </div>
                 )
             })}

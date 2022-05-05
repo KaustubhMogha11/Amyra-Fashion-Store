@@ -5,8 +5,8 @@ import Footer from "../footer/Footer";
 import AdditionalInfo from "./AdditionalInfo";
 import Review from "./Review";
 import "./singlepage.css";
-import { useParams,Link } from 'react-router-dom';
-
+import { useParams,Link,useNavigate} from 'react-router-dom';
+import { addToCart } from '../../redux/actions/cartActions';
 
 import { useDispatch, useSelector } from 'react-redux';
 
@@ -31,7 +31,16 @@ const SingleProductPage = (match) => {
            
   }, [dispatch]);
    
+  const navigate= useNavigate();
+ 
   
+  
+  const [quantity, setQuantity] = useState(1);
+
+  const addItemToCart = () => {
+    dispatch(addToCart(id, quantity));
+    navigate('/cart');
+}
       
   const [imgShow, setImgShow] = useState('');
   return (
@@ -107,7 +116,7 @@ const SingleProductPage = (match) => {
             </p>
             <div className="product-card-btn-cont">
               <input type="text" placeholder="1" />
-              <span>add to cart</span>
+              <span onClick={() => addItemToCart()}>add to cart</span>
             </div>
             <div className="add-to-wishlist">
               <img src="images/like.png" alt="heart" />
