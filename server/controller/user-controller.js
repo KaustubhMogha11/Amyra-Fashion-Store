@@ -3,7 +3,7 @@ import User from '../models/userSchema.js';
 
 export const userSignUp = async (request, response) => {
     try {
-        const exist = await User.findOne({ username: request.body.username });
+        const exist = await User.findOne({ name: request.body.name });
         if(exist) {
             return response.status(401).json('User already exist');
         }
@@ -18,9 +18,9 @@ export const userSignUp = async (request, response) => {
 }
 export const userLogIn = async (request, response) => {
     try {
-        let user = await User.findOne({ username: request.body.username, password: request.body.password });
+        let user = await User.findOne({ username: request.body.name, password: request.body.password });
         if(user) {
-            return response.status(200).json(`${request.body.username} login successfull`);
+            return response.status(200).json(`${request.body.name} login successfull`);
         } else {
             return response.status(401).json('Invalid Login');
         }
