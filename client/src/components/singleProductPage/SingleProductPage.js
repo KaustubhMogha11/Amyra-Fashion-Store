@@ -7,6 +7,7 @@ import Review from "./Review";
 import "./singlepage.css";
 import { useParams,Link,useNavigate} from 'react-router-dom';
 import { addToCart } from '../../redux/actions/cartActions';
+import { addToWish } from '../../redux/actions/wishlistActions';
 
 import { useDispatch, useSelector } from 'react-redux';
 
@@ -40,6 +41,10 @@ const SingleProductPage = (match) => {
   const addItemToCart = () => {
     dispatch(addToCart(id, quantity));
     navigate('/cart');
+}
+const addItemToWish = () => {
+  dispatch(addToWish(id, quantity));
+  navigate('/wishlist');
 }
       
   const [imgShow, setImgShow] = useState('');
@@ -119,7 +124,7 @@ const SingleProductPage = (match) => {
               <span onClick={() => addItemToCart()}>add to cart</span>
             </div>
             <div className="add-to-wishlist">
-              <img src="images/like.png" alt="heart" />
+              <img src="images/like.png" alt="heart" onClick={() => addItemToWish()} />
               add to wishlist
             </div>
           </div>

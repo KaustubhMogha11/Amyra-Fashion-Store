@@ -81,8 +81,8 @@ const Navbar = () => {
                   <img src="images/login.png" alt="wishlist" />
                 </div>
               
-                <Link to='/login' className="link-class">
-                  Login</Link>/<Link to='/register' className="link-class" >register</Link>
+                  <Link to='/login' className="link-class">
+                    Login</Link>/<Link to='/register' className="link-class" >register</Link>
               </div>
             </div>
             <hr />

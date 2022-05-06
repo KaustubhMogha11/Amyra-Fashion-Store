@@ -18,10 +18,12 @@ import Cart from "./components/cart/Cart";
 import WishList from "./components/wishlist/WishList";
 import Error404 from "./components/404errorpage/Error404";
 import ContactUs from './components/contact/ContactUs'
+import ContextProvider from './components/context/ContextProvider';
 function App() {
  
   return (
     <>
+     <ContextProvider>
     <Router>
     <Navbar />
     <div style={{ height: 'auto', width: 'auto', overflow: 'hidden', position: 'relative' }}>
@@ -41,6 +43,7 @@ function App() {
         </div>
       </div>
       </Router>
+      </ContextProvider>
     </>
   );
 }
