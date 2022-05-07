@@ -6,7 +6,7 @@ import {Link} from 'react-router-dom'
 import { authenticateSignup, authenticateLogin } from '../../service/api';
 
 
-const Login = ({ open, setOpen, setAccount }) => {
+const Login = () => {
 
  
   return (

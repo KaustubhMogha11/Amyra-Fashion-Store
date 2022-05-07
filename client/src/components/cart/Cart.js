@@ -14,6 +14,7 @@ const Cart = () => {
   const [address, setAddress] = useState();
   const [totalAmount,setTotalAmount] = useState(0)
   const {id}=useParams();
+  const [subtotal,settotal]=useState(0)
   // console.log(id);
   // let cartData = JSON.parse(localStorage.getItem('cartData'))
   // cartData = Filterdata(cartData)
@@ -58,10 +59,12 @@ const Cart = () => {
                     return (
                       <CartCard
                         key={id}
+                        id={val.id}
                         itemName={val.title}
                         price={val.price}
                         imgOne={val.imgOne}
-                        calAmount={(Amount)=>setTotalAmount(Amount + totalAmount)}
+                        calAmount={()=>setTotalAmount(parseInt(val.price) + parseInt(totalAmount))}
+                        totalAmount={totalAmount}
                       />
                     );
                   })}
@@ -73,7 +76,7 @@ const Cart = () => {
             <div className="cart-box-sec">
               <div className="cart-subtotal">
                 subtotal
-                <span>₹{cartItems.price}.00</span>
+                <span>₹{totalAmount}.00</span>
               </div>
               <div className="cart-subtotal cart-add">
                 shipping
