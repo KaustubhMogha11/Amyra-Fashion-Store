@@ -14,7 +14,7 @@ const Cart = () => {
   const [address, setAddress] = useState();
   const [totalAmount,setTotalAmount] = useState(0)
   const {id}=useParams();
-  const [subtotal,settotal]=useState(0)
+  const [price,setPrice]=useState(0)
   // console.log(id);
   // let cartData = JSON.parse(localStorage.getItem('cartData'))
   // cartData = Filterdata(cartData)
@@ -37,7 +37,20 @@ const Cart = () => {
   //     dispatch(removeFromCart(id));
   // }
 
+  useEffect(() => {
+  mrp();
+}, [cartItems]);
 
+const mrp = () => {
+    let price = 0;
+    console.log(cartItems);
+    cartItems.map(item => {
+        price=parseInt(price)+parseInt(item.price)
+        // discount += (item.price.mrp - item.price.cost) 
+    })
+    setPrice(price);
+    
+}
   const changeAddress = (e) => {
     setAddress(e.target.value);
   };
@@ -63,8 +76,9 @@ const Cart = () => {
                         itemName={val.title}
                         price={val.price}
                         imgOne={val.imgOne}
-                        calAmount={()=>setTotalAmount(parseInt(val.price) + parseInt(totalAmount))}
-                        totalAmount={totalAmount}
+                        // calAmount={()=>setTotalAmount(parseInt(val.price) + parseInt(totalAmount))}
+                        // totalAmount={totalAmount}
+                        calAmount={(Amount)=>setTotalAmount(parseInt(Amount) + parseInt(totalAmount))}
                       />
                     );
                   })}
@@ -76,7 +90,7 @@ const Cart = () => {
             <div className="cart-box-sec">
               <div className="cart-subtotal">
                 subtotal
-                <span>₹{totalAmount}.00</span>
+                <span>₹{totalAmount+price}.00</span>
               </div>
               <div className="cart-subtotal cart-add">
                 shipping
@@ -108,7 +122,7 @@ const Cart = () => {
               </div>
               <div className="cart-total">
                 Total
-                <span>₹{totalAmount}.00</span>
+                <span>₹{totalAmount+price}.00</span>
               </div>
               <button className="check-btn">proceed to checkout</button>
             </div>

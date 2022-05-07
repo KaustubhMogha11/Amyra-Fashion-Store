@@ -28,7 +28,7 @@ const WishList = () => {
         {!wishItems?<h1>WishList is Empty</h1>:
         wishItems.map((val,id)=>{
           return(
-            <WishListCard key={id} item={val}   itemName={val.title}
+            <WishListCard key={id} item={val}  id={val.id} itemName={val.title}
                         price={val.price}
                         imgOne={val.imgOne}
                           stock={val.stock}
