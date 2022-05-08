@@ -5,7 +5,7 @@ const Review = () => {
     <>
         <div className="review-cont">
             <div className="review-profile-img">
-                <img src="images/amarya-img-1.jpg" alt="profile" />
+                <img src="/images/amarya-img-1.jpg" alt="profile" />
             </div>
             <div className="review-description">
                 <div className="review-user">anonymous <span>-dec 7 2022</span></div>
@@ -16,4 +16,4 @@ const Review = () => {
   )
 }
 
-export default Review 
+export default Review

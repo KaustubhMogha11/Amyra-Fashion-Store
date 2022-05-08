@@ -123,8 +123,8 @@ const addItemToWish = () => {
               <input type="text" placeholder="1" />
               <span onClick={() => addItemToCart()}>add to cart</span>
             </div>
-            <div className="add-to-wishlist">
-              <img src="images/like.png" alt="heart" onClick={() => addItemToWish()} />
+            <div className="add-to-wishlist" onClick={() => addItemToWish()}>
+              <img src="/images/like.png" alt="heart"  />
               add to wishlist
             </div>
           </div>

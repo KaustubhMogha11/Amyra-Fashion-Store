@@ -14,7 +14,7 @@ const Insta = () => {
                     <img src="/images/ig/ig8.jpg" alt="insta" className='instapic' />
                     <img src="/images/ig/ig9.jpg" alt="insta" className='instapic' />
                     <div className="insta-overlay">
-                        <a href="https://www.instagram.com/the___.inferno/" className="inst-follow-cont">follow our instagram</a>
+                        <a href="" className="inst-follow-cont">follow our instagram</a>
                     </div>
                 </div>
             </div>
