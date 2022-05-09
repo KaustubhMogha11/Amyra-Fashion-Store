@@ -8,6 +8,9 @@ import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { addToCart, removeFromCart } from '../../redux/actions/cartActions';
 import { useParams } from "react-router-dom";
+import { post } from '../utils/paytm';
+import { payUsingPaytm } from '../../service/api';
+
 const Cart = () => {
   const [isAddress, setIsaddress] = useState(false);
   const [finalAddress, setfinalAddress] = useState("india");
@@ -54,6 +57,15 @@ const mrp = () => {
   const changeAddress = (e) => {
     setAddress(e.target.value);
   };
+
+  const buyNow = async () => {
+    let response = await payUsingPaytm({ amount: 500, email: 'kaustubhmogha10@gmail.com'});
+    var information = {
+        action: 'https://securegw-stage.paytm.in/order/process',
+        params: response    
+    }
+    post(information);
+}
 
   return (
     <>
@@ -124,7 +136,7 @@ const mrp = () => {
                 Total
                 <span>₹{totalAmount+price}.00</span>
               </div>
-              <button className="check-btn">proceed to checkout</button>
+              <button className="check-btn"  onClick={() => buyNow()}>proceed to checkout</button>
             </div>
           </div>
         </div>
