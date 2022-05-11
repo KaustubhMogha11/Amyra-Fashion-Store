@@ -27,18 +27,9 @@ const Cart = () => {
 
   const dispatch = useDispatch();
   
-  // useEffect(() => {
-  //     // if(cartItems && match.params.id !== cartItems.id)   
-  //         // dispatch(addToCart(id));
-
-     
-    
-  //     console.log(cartItems);
-  // }, [dispatch]);
-
-  // const removeItemFromCart = (id) => {
-  //     dispatch(removeFromCart(id));
-  // }
+  
+  const userLogin = useSelector((state) => state.userLogin);
+  const { userInfo } = userLogin;
 
   useEffect(() => {
   mrp();
@@ -68,7 +59,7 @@ const mrp = () => {
 }
 
   return (
-    <>
+     <>  
       <div className="cart-container-section">
         <div className="cart-container-heading">Cart</div>
         <div className="cart-container">
@@ -143,7 +134,7 @@ const mrp = () => {
       </div>
       <Insta />
       <Footer />
-    </>
+      </>
   );
 };
 

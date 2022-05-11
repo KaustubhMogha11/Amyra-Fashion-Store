@@ -26,6 +26,7 @@ const Navbar = () => {
     const logoutHandler = () => {
       dispatch(logout());
     cartItems.length=0
+    navigate("/");
 
     };
   

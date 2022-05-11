@@ -3,6 +3,7 @@
     width: 100%;
     background-color: #F8F8F8;
     display: flex;
+    
 }
 .men-sec-img{
     height: 100%;
@@ -70,7 +71,7 @@
     }
     .mens-jacket-sec-card-cont{
         width: 100%;
-
+        
     }
     .mens-jacket-sec-cont{
         padding: 1rem;
@@ -86,7 +87,7 @@
     .mens-jacket-sec-card-cont{
         padding: 0;
     }
-
+    
 }
 
 
