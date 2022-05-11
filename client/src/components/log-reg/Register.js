@@ -2,12 +2,40 @@ import React,{useState,useEffect} from 'react'
 import "./log-reg.css"
 import Footer from '../footer/Footer'
 import Insta from '../instagram/Insta'
-import {Link} from 'react-router-dom'
-import { authenticateSignup, authenticateLogin } from '../../service/api';
+import {Link,useNavigate} from 'react-router-dom'
+
+import { register} from "../../redux/actions/userActions.js";
+import { useSelector, useDispatch } from 'react-redux';
+
+const Register = () => {
+  const [email, setEmail] = useState("");
+  const [name, setName] = useState("");
+ 
+  const [password, setPassword] = useState("");
+  const [confirmpassword, setConfirmPassword] = useState("");
+  const [message, setMessage] = useState(null);
+  const navigate= useNavigate();
+  const dispatch = useDispatch();
+
+  const userRegister = useSelector((state) => state.userRegister);
+  const {userInfo}= userRegister;
 
 
-const Register = (setAccount) => {
-  
+  useEffect(() => {
+    if (userInfo) {
+      console.log(userInfo)
+      navigate('/');
+    }
+  }, [navigate, userInfo]);
+
+  const submitHandler = (e) => {
+    e.preventDefault();
+
+    if (password !== confirmpassword) {
+      setMessage("Passwords do not match");
+    } else dispatch(register(name, email, password));
+  };
+
 
   return (
      
@@ -15,16 +43,16 @@ const Register = (setAccount) => {
 
       <>
        <div className="log-reg-sec ">
-          <form>
+          <form onSubmit={submitHandler}>
               <div className="form-heading">
               Register
               </div>
-              <input type="text" className='form-username' placeholder='name'/>
-              <input type="email" className='form-username' placeholder='email address' />
+              <input type="name" className='form-username' placeholder='name' value={name} onChange={(e) => setName(e.target.value)} />
+              <input type="email" className='form-username' placeholder='email address' value={email} onChange={(e) => setEmail(e.target.value)} />
               {/* <input type="date" className='form-username' placeholder='Date of Birth' onChange={(e) => onInputChange(e)}/> */}
-              <input type="password" className='form-username' placeholder='enter password' />
-              {/* <input type="password" className='form-username' placeholder='enter password again' onChange={(e) => onInputChange(e)}/> */}
-              <div className="form-btn"><button >Let me in</button></div>
+              <input type="password" className='form-username' placeholder='enter password' value={password}  onChange={(e) => setPassword(e.target.value)} />
+              <input type="password" className='form-username' placeholder='enter password again' value={confirmpassword}  onChange={(e) => setConfirmPassword(e.target.value)}/>
+              <div className="form-btn"><button type="submit">Let me in</button></div>
               <div className="remember-me-cont">
               <div className="remember-me">
                   or Login

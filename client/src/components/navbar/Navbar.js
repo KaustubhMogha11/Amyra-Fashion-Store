@@ -1,10 +1,10 @@
 import React, { useState,useEffect } from "react";
-import {  Link,useParams } from "react-router-dom";
+import { Link ,useParams,useNavigate } from "react-router-dom";
 import "./navbar.css";
 import { getProducts as listProducts } from '../../redux/actions/productActions';
 import { useSelector, useDispatch } from 'react-redux'; // hooks
 import SearchCard from "../cards/searchCard/SearchCard";
-
+import { logout } from "../../redux/actions/userActions";
 const Navbar = () => {
   const [changeIcon, setChangeIcon] = useState("images/hamburger.png");
   const [isSidebar, setIsSideBar] = useState(false);
@@ -18,87 +18,100 @@ const Navbar = () => {
         dispatch(listProducts())
     }, [dispatch])
 
-  return (
-    <>
-    
+    const navigate = useNavigate()
+  
+    const userLogin = useSelector((state) => state.userLogin);
+    const { userInfo } = userLogin;
+  
+    const logoutHandler = () => {
+      dispatch(logout());
+    cartItems.length=0
 
-      <div className="navbar">
-        {/* side bar */}
-     
-        <div className={isSidebar ? "sidebar-active" : "sidebar-section"}>
-          <div className="sideBar-cont">
-            <div className="sidebar-cancel">
-              <img
-                src="images/cancel.png"
-                alt="cancel"
-                onClick={() => setIsSideBar(false)}
-              />
-            </div>
-            <div className="nav-routes-sec">
-              <div className="nav-route">
-              
-                <Link to='/' className="nav-route">
-                  HOME
-                  <img src="images/fill-right-arrow.png" alt="arrow" />
-                </Link>
+    };
+  
+    useEffect(() => {}, [userInfo]);
+   
+  const cartDetails = useSelector(state => state.cart);
+  const { cartItems } = cartDetails;
+  const wishDetails = useSelector(state => state.wish);
+  const { wishItems } = wishDetails;
+    return (
+      <>
+        <div className="navbar">
+          {/* side bar */}
+          <div className={isSidebar ? "sidebar-active" : "sidebar-section"}>
+            <div className="sideBar-cont">
+              <div className="sidebar-cancel">
+                <img
+                  src="/images/cancel.png"
+                  alt="cancel"
+                  onClick={() => setIsSideBar(false)}
+                />
               </div>
-              <div className="nav-route">
-               
-                <Link to='/shop' className="nav-route">
-                  shop
-                  <img src="images/fill-right-arrow.png" alt="arrow" />
-                </Link>
-              </div>
-              <div className="nav-route">
-              
-              <Link to='/contact-us' className="nav-route">
-                  contact us
-                  <img src="images/fill-right-arrow.png" alt="arrow" />
-                </Link>
-              </div>
-              <div className="nav-route">
-               
-                <Link to='/customer' className="nav-route">
-                  Customer Help
-                  <img src="images/fill-right-arrow.png" alt="arrow" />
-                </Link>
-              </div>
-            </div>
-            <hr />
-            <div className="nav-main-route-sec">
-              <div className="nav-main-route">
-                
-                <Link to='/wishlist' className="nav-main-route">
-                  <div className="nav-route-img">
-                    <img src="images/wish-list.png" alt="wishlist" />
-                  </div>
-                  Wishlist
-                </Link>
-              </div>
-              <div className="nav-main-route">
-
-                <div className="nav-route-img">
-                  <img src="images/login.png" alt="wishlist" />
+              <div className="nav-routes-sec" >
+                <div className="nav-route " onClick={()=>setIsSideBar(false)} >
+                  <Link to='/' className="nav-route" >
+                    HOME
+                    <img src="/images/fill-right-arrow.png" alt="arrow" />
+                  </Link>
                 </div>
-              
-                  <Link to='/login' className="link-class">
-                    Login</Link>/<Link to='/register' className="link-class" >register</Link>
+                <div className="nav-route" onClick={()=>setIsSideBar(false)}>
+                  <Link to='/shop' className="nav-route" >
+                    shop
+                    <img src="/images/fill-right-arrow.png" alt="arrow" />
+                  </Link>
+                </div>
+                <div className="nav-route">
+                  <Link to='/contact-us' className="nav-route" onClick={()=>setIsSideBar(false)}>
+                    contact us
+                    <img src="/images/fill-right-arrow.png" alt="arrow" />
+                  </Link>
+                </div>
+                <div className="nav-route">
+                  <Link to='/customer' className="nav-route" onClick={()=>setIsSideBar(false)}>
+                    Customer Help
+                    <img src="/images/fill-right-arrow.png" alt="arrow" />
+                  </Link>
+                </div>
               </div>
-            </div>
-            <hr />
-            <div className="nav-social-links">
-            
-                <img src="images/facebook.png" alt="facebook" />
-             
-            
-                <img src="images/instagram.png" alt="insta" />
-           
-             
-                <img src="images/linkedin.png" alt="linkedin" />
-             
-            
-                <img src="images/github.png" alt="github" />
-            
+              <hr />
+              <div className="nav-main-route-sec">
+                <div className="nav-main-route" onClick={()=>setIsSideBar(false)}>
+                  <Link to='/wishlist' className="nav-main-route">
+                    <div className="nav-route-img">
+                      <img src="/images/wish-list.png" alt="wishlist" />
+                    </div>
+                    Wishlist
+                  </Link>
+                </div>
+                {!userInfo ? <>
+                  <div className="nav-main-route" onClick={() => setIsSideBar(false)}>
+  
+                    <div className="nav-route-img">
+                      <img src="/images/login.png" alt="wishlist" />
+                    </div>
+                    <Link to='/login' className="link-class">
+                      Login</Link>/<Link to='/register' className="link-class" >register</Link>
+                  </div>
+                </> : <>
+                  <div className="nav-main-route" onClick={logoutHandler}><span onClick={() => setIsSideBar(false)}>Logout</span></div>
+                </>}
+  
+              </div>
+              <hr />
+              <div className="nav-social-links">
+              <a href="">
+                <img src="/images/facebook.png" alt="facebook" />
+              </a>
+              <a href="">
+                <img src="/images/instagram.png" alt="insta" />
+              </a>
+              <a href="">
+                <img src="/images/linkedin.png" alt="linkedin" />
+              </a>
+              <a href="">
+                <img src="/images/github.png" alt="github" />
+              </a>
             </div>
           </div>
         </div>
@@ -153,9 +166,8 @@ const Navbar = () => {
                   alt="wishlist"
                   className="nav-btn-icon"
                 />
-                <span>0</span>
-              
-            </Link>
+                  <span>{wishItems?wishItems.length:0}</span>
+              </Link>
             </div>
             <div className="nav-cart ">
               <Link to='/cart' className="nav-cart ">
@@ -169,7 +181,7 @@ const Navbar = () => {
                     alt="cart"
                     className="nav-btn-icon"
                   />
-                  <span>0</span>
+                  <span>{cartItems?cartItems.length:0}</span>
 
                 </div>
               </Link>

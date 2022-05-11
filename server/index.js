@@ -11,22 +11,24 @@ import DefaultData from './default.js';
 import Routes from './routes/routes.js';
 import userRoutes from "./routes/userRoutes.js";
 import { v4 as uuid } from 'uuid';
-import { errorHandler, notFound } from "./middleware/errorMiddleware.js";
+// import { errorHandler, notFound } from "./middleware/errorMiddleware.js";
 dotenv.config();
 
 const username = process.env.DB_USERNAME;
 const password = process.env.DB_PASSWORD;
 
 app.use(bodyParser.json({ extended: true }));
+app.use(express.json()); // to accept json data
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());
 app.use('/', Routes);
 app.use("/api/users", userRoutes);
 
 Connection(username, password);
+
 // Error Handling middlewares
-app.use(notFound);
-app.use(errorHandler);
+// app.use(notFound);
+// app.use(errorHandler);
 
 app.listen(port, function (err) {
     if (err) {
