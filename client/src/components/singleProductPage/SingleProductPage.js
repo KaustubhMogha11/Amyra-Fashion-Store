@@ -48,6 +48,19 @@ const addItemToWish = () => {
 }
       
   const [imgShow, setImgShow] = useState('');
+
+  const [reviewData,setReviewData] = useState({
+    name:'',
+    email:'',
+    review:''
+  })
+  let name,val
+  const handelReview=(e)=>{
+    name = e.target.name
+    val = e.target.value
+    setReviewData({...reviewData,[name]:val})
+  }
+  
   return (
     <>
     

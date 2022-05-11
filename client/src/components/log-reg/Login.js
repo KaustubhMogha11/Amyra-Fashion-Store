@@ -3,7 +3,7 @@ import "./log-reg.css"
 import Footer from '../footer/Footer'
 import Insta from '../instagram/Insta'
 import {Link,useNavigate} from 'react-router-dom'
-import { authenticateSignup, authenticateLogin } from '../../service/api';
+
 import { login } from "../../redux/actions/userActions.js";
 import { useSelector, useDispatch } from 'react-redux';
 const Login = () => {
