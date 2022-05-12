@@ -129,9 +129,9 @@ const addItemToWish = () => {
               ₹{product?.price}
             </div>
             <p className="product-des">
-             {product?.description}
-             {!product?.stock?<span className="outOfStockTextShow">Out of stock</span>:null}
+              {product?.description}
             </p>
+            {!product?.stock?<span className="outOfStockTextShow">Out of stock</span>:null}
             <div className="product-card-btn-cont">
               <input type="text" placeholder="1" />
               <span onClick={() => addItemToCart()}>add to cart</span>

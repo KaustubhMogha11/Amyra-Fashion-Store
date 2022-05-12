@@ -6,9 +6,9 @@ import { useDispatch } from 'react-redux';
 
 const CartCard = (props) => {
   const [quantity, setQunatity] = useState(1);
-  console.log(props);
+  // console.log(props);
   const dispatch = useDispatch();
-  console.log(props.totalAmount);
+  
   const removeItemFromCart = (id) => {
     console.log(id);
     dispatch(removeFromCart(id));
