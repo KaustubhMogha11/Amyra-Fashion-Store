@@ -11,7 +11,7 @@
 
 <!-- PROJECT SHIELDS -->
 
-[![LinkedIn][linkedin-shield]]https://www.linkedin.com/in/kaustubh-mogha-6b7342192/)
+[![LinkedIn][linkedin-shield]](https://www.linkedin.com/in/kaustubh-mogha-6b7342192/)
 
 
 
@@ -19,7 +19,7 @@
 <br />
 <div align="center">
   
-![](screenshots/1.PNG)
+![](screenshots/1.png)
  
 
   <h3 align="center">Amayra's Shop</h3>
@@ -61,15 +61,15 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-![](screenshots/1.PNG)
-![](screenshots/2.PNG)
-![](screenshots/3.PNG)
-![](screenshots/4.PNG)
-![](screenshots/5PNG)
-![](screenshots/6PNG)
-![](screenshots/7PNG)
-![](screenshots/8PNG)
-![](screenshots/10PNG)
+![](screenshots/1.png)
+![](screenshots/2.png)
+![](screenshots/3.png)
+![](screenshots/4.png)
+![](screenshots/5.png)
+![](screenshots/6.png)
+![](screenshots/7.png)
+![](screenshots/8.png)
+![](screenshots/10.png)
 There are many great Shops ; however, I didn't find one that really suited my needs so I created this enhanced one. I want to create a shop on fashion that'll be the last one you ever need -- I think this is it.
 
 Here's why:
